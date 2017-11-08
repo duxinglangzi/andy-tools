@@ -28,7 +28,7 @@ public class SemaphoreTest {
             this.name = name;
             this.wc = wc;
         }
-
+        @Override
         public void run() {
             System.out.print(name + "：憋死老子了!");
             if (wc.availablePermits() > 0) {

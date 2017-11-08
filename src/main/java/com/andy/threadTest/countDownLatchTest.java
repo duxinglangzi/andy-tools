@@ -23,15 +23,15 @@ public class countDownLatchTest {
         final ExecutorService exec = Executors.newFixedThreadPool(10);
 
         for (int index = 0; index < 10; index++) {
-        final int NO = index + 1;
-        exec.submit(new Thread(new LatchTest(end, NO)));
-    }
+            final int NO = index + 1;
+            exec.submit(new Thread(new LatchTest(end, NO)));
+        }
         System.out.println("比赛开始啦");
-    // 等待end变为0，即所有选手到达终点
+        // 等待end变为0，即所有选手到达终点
         end.await();
         System.out.println("激烈的比赛结束了...");
         exec.shutdown();
-}
+    }
 
 
 }
