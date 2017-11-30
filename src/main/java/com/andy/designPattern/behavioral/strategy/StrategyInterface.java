@@ -1,7 +1,7 @@
 package com.andy.designPattern.behavioral.strategy;
 
 /**
- * 策略接口
+ * 策略者接口
  *
  * @author sunny
  * @create 2017/11/24 14:24
