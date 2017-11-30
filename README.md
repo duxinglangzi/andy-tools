@@ -8,7 +8,8 @@
     - [消费者-生产者](https://github.com/duxinglangzi/andy-tools/tree/master/src/main/java/com/andy/concurrent/consumerAndProducer)
 - [设计模式](https://github.com/duxinglangzi/andy-tools/tree/master/src/main/java/com/andy/designPattern)
     - [创建模式(Creational)](https://github.com/duxinglangzi/andy-tools/tree/master/src/main/java/com/andy/designPattern/creational)
-        -[简单工厂(factory)](https://github.com/duxinglangzi/andy-tools/tree/master/src/main/java/com/andy/designPattern/creational/factory)
+        - [简单工厂(factory)](https://github.com/duxinglangzi/andy-tools/tree/master/src/main/java/com/andy/designPattern/creational/factory)
+        - [单例模式(singleton)](https://github.com/duxinglangzi/andy-tools/tree/master/src/main/java/com/andy/designPattern/creational/singleton)
     - [结构模式(Structural)]
     - [行为模式(Behavioral)](https://github.com/duxinglangzi/andy-tools/tree/master/src/main/java/com/andy/designPattern/behavioral)
 - [代码收藏夹](https://github.com/duxinglangzi/andy-tools/tree/master/src/main/java/com/andy/codeCollector)
