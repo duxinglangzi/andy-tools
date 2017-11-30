@@ -1,5 +1,8 @@
 ## 分享知识和分享苹果有着本质区别
 
+
+[![Build Status](https://travis-ci.org/duxinglangzi/andy-tools.svg?branch=master)](https://travis-ci.org/duxinglangzi/andy-tools)
+
 > 分享知识可以从中得到快乐，然而分享苹果并不能，
 
 ## 工程目录
