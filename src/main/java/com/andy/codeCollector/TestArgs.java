@@ -1,4 +1,4 @@
-package com.andy.marksCode;
+package com.andy.codeCollector;
 
 import java.lang.reflect.Field;
 
