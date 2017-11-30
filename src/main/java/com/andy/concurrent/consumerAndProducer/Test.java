@@ -1,4 +1,4 @@
-package com.andy.ConsumerAndProducer;
+package com.andy.concurrent.consumerAndProducer;
 
 public class Test {
 

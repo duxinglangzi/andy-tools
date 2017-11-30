@@ -1,26 +1,27 @@
-package com.andy.ConsumerAndProducer;
+package com.andy.concurrent.consumerAndProducer;
 
-public class Producer extends Thread {
-    // 每次生产的产品数量
+public class Consumer extends Thread {
+    // 每次消费的产品数量
     private int num;
 
     // 所在放置的仓库
     private Storage storage;
 
     // 构造函数，设置仓库
-    public Producer(Storage storage, int num) {
+    public Consumer(Storage storage, int num) {
         this.storage = storage;
-        this.num = num;
+        this.num=num;
     }
 
     // 线程run函数
+    @Override
     public void run() {
-        produce(num);
+        consume(num);
     }
 
     // 调用仓库Storage的生产函数
-    public void produce(int num) {
-        storage.produce(num);
+    public void consume(int num) {
+        storage.consume(num);
     }
 
     // get/set方法
@@ -40,4 +41,3 @@ public class Producer extends Thread {
         this.storage = storage;
     }
 }
-

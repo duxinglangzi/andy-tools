@@ -1,4 +1,4 @@
-package com.andy.strategy;
+package com.andy.designPattern.behavioral.strategy;
 
 import java.util.HashMap;
 import java.util.Map;

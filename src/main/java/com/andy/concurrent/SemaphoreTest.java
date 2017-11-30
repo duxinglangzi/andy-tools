@@ -1,4 +1,4 @@
-package com.andy.threadTest;
+package com.andy.concurrent;
 
 import java.util.Random;
 import java.util.concurrent.Semaphore;

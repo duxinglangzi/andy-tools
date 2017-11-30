@@ -1,11 +1,11 @@
-package com.andy.atomic;
+package com.andy.concurrent.juc.atomic;
 
 
 import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
 
 public class AtomicIntegerFieldUpdaterCounter {
     // 步骤1 构造方法
-    private static AtomicIntegerFieldUpdater<Details> atomicIntegerFieldUpdater = AtomicIntegerFieldUpdater.newUpdater(Details.class, "numberTimesInvoked");
+    private static final AtomicIntegerFieldUpdater<Details> atomicIntegerFieldUpdater = AtomicIntegerFieldUpdater.newUpdater(Details.class, "numberTimesInvoked");
 
     // 步骤2 对AtomicIntegerFieldUpdater修饰的变量进行操作
     public int addOne(Details details) {

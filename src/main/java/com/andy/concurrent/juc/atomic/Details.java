@@ -1,4 +1,4 @@
-package com.andy.atomic;
+package com.andy.concurrent.juc.atomic;
 
 public class Details {
 
