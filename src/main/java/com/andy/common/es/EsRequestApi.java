@@ -1,7 +1,7 @@
 package com.andy.common.es;
 
 import com.alibaba.fastjson.JSON;
-import com.yazuo.weixin.common.https.LocalHttpClient;
+import com.andy.common.https.LocalHttpClient;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.http.HttpHeaders;
