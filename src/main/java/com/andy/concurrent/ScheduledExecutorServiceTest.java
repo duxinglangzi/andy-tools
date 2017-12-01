@@ -1,6 +1,7 @@
 package com.andy.concurrent;
 
-import com.andy.utils.SimpleDateUtils;
+
+import com.andy.common.utils.SimpleDateUtils;
 
 import java.util.Date;
 import java.util.concurrent.Executors;
