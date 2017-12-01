@@ -1,4 +1,4 @@
-package com.andy.utils;
+package com.andy.common.utils;
 
 
 import com.andy.codeCollector.ObjectUtils;

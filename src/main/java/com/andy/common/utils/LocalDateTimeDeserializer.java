@@ -1,4 +1,4 @@
-package com.andy.utils;
+package com.andy.common.utils;
 
 import com.alibaba.fastjson.parser.DefaultJSONParser;
 import com.alibaba.fastjson.parser.JSONLexer;
