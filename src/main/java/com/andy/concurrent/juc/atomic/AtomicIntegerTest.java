@@ -1,5 +1,7 @@
 package com.andy.concurrent.juc.atomic;
 
+import org.junit.Assert;
+
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -27,6 +29,8 @@ public class AtomicIntegerTest {
         }
 
         Thread.sleep(3000);//等待所有子线程执行完成
+        Assert.assertEquals(sharedValue.get(), 10000 * 10);
+        new AssertionError("this is fuck ");
     }
 
 
