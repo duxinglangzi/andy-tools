@@ -1,6 +1,6 @@
 package com.andy.designPattern.creational.singleton;
 
-import java.util.Objects;
+import org.junit.Assert;
 
 /**
  * <p>ClassName:单例模式  </p>
@@ -8,7 +8,7 @@ import java.util.Objects;
  * <p>Company:雅座在线（北京）科技发展有限公司 </p>
  * <p>@author wuqiong  2017/11/30 14:41 </p>
  */
-public class SingletonPattern {
+public class SingletonPattern{
 
     /**
      * 懒汉式，线程不安全，在使用时初始化示例（懒加载）
@@ -109,13 +109,15 @@ public class SingletonPattern {
     }
 
     public static void main(String[] args) {
-        Objects.equals(Singleton1.getInstance(), Singleton1.getInstance());
-        Objects.equals(Singleton1.getInstance(), Singleton1.getInstance());
-        Objects.equals(Singleton2.getInstance(), Singleton2.getInstance());
-        Objects.equals(Singleton3.getInstance(), Singleton3.getInstance());
-        Objects.equals(Singleton4.getInstance(), Singleton4.getInstance());
-        Objects.equals(Singleton5.getInstance(), Singleton5.getInstance());
-        Objects.equals(Singleton6.INSTANCE, Singleton6.INSTANCE);
+        Assert.assertEquals(Singleton1.getInstance(), Singleton1.getInstance());
+        Assert.assertEquals(Singleton1.getInstance(), Singleton1.getInstance());
+        Assert.assertEquals(Singleton2.getInstance(), Singleton2.getInstance());
+        Assert.assertEquals(Singleton3.getInstance(), Singleton3.getInstance());
+        Assert.assertEquals(Singleton4.getInstance(), Singleton4.getInstance());
+        Assert.assertEquals(Singleton5.getInstance(), Singleton5.getInstance());
+        Assert.assertEquals(Singleton6.INSTANCE, Singleton6.INSTANCE);
+
+        Assert.assertEquals(Singleton6.INSTANCE, Singleton6.INSTANCE);
     }
 
 }
