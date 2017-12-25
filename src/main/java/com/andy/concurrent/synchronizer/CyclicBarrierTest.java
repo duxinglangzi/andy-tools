@@ -1,4 +1,4 @@
-package com.andy.concurrent;
+package com.andy.concurrent.synchronizer;
 
 import java.io.IOException;
 import java.util.Random;
@@ -8,7 +8,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * <p>Description: 描述该类实现了什么功能 </p>
+ * <p>Description: 循环栏栅 </p>
  * <p>Company:雅座在线（北京）科技发展有限公司 </p>
  *
  * @author wuqiong  2017年8月11日

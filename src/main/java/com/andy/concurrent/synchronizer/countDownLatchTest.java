@@ -1,4 +1,4 @@
-package com.andy.concurrent;
+package com.andy.concurrent.synchronizer;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;

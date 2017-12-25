@@ -1,4 +1,4 @@
-package com.andy.concurrent;
+package com.andy.concurrent.synchronizer;
 
 import java.util.Random;
 import java.util.concurrent.Semaphore;

@@ -1,4 +1,4 @@
-package com.andy.concurrent;
+package com.andy.concurrent.synchronizer;
 
 
 import com.andy.common.utils.SimpleDateUtils;
