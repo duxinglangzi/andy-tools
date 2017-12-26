@@ -91,10 +91,45 @@ public class ForkJoinTest extends TestCase{
         }
     }
 
+
+    /**
+     * 测试 fork-join 无返回值任务
+     */
+    public void test_RecursiveAction_task(){
+        try {
+            ForkJoinPool forkJoinPool = new ForkJoinPool();
+
+            Job job=new Job(1L,1000L);
+            System.out.println("开始前:"+System.currentTimeMillis());
+            Future future = forkJoinPool.submit(job);
+            future.get();
+            System.out.println("结束后:"+System.currentTimeMillis());
+            /**
+             * 开始前:1514271848565
+             * 结束后:1514271849153
+             */
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+
     /**
      * 无返回值的 任务
      */
     public static class Job extends RecursiveAction{
+
+        private static final Long threshold = 10L;//可以直接求和的临界值。 当两数值相差不足此值时，直接求和
+        private Long min;//计算的起始最小值
+        private Long max;//计算的起始最大值
+        Job(Long min, Long max) {
+            this.max = max;
+            this.min = min;
+        }
 
         /**
          * The main computation performed by this task.
@@ -106,7 +141,23 @@ public class ForkJoinTest extends TestCase{
             //1、适用于各种定时任务，负责执行即可，无需在意执行结果
             //2、适用于数据批量整理等等，整完即可。
 
-
+            if((max-min)<=threshold){
+                for (long i = min;i<=max;i++){
+                    try {
+                        TimeUnit.MILLISECONDS.sleep(5L);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }else{
+                long mid = (max + min) >>> 1; //最小值和最大值相加除以2
+                Job j1 = new Job(min, mid);
+                j1.fork();//执行子任务
+                Job j2 = new Job(mid + 1, max);
+                j2.fork();
+                j1.join();
+                j2.join();
+            }
         }
     }
 
