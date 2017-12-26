@@ -3,10 +3,7 @@ package com.andy.concurrent;
 import junit.framework.TestCase;
 import org.junit.Assert;
 
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ForkJoinPool;
-import java.util.concurrent.Future;
-import java.util.concurrent.RecursiveTask;
+import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -54,14 +51,16 @@ public class ForkJoinTest extends TestCase{
 //        System.out.println("计算完成后时间:"+System.currentTimeMillis());
     }
 
-
+    /**
+     * 有返回值的 任务
+     */
     public static class NumberSum extends RecursiveTask<Long> {
+        //1、适用于某个时间段的 数据量、交易量 等等
+        //2、适用于计算
 
         private static final Long threshold = 100L;//可以直接求和的临界值。 当两数值相差不足此值时，直接求和
-
         private Long min;//计算的起始最小值
         private Long max;//计算的起始最大值
-
         NumberSum(Long min, Long max) {
             this.max = max;
             this.min = min;
@@ -69,13 +68,11 @@ public class ForkJoinTest extends TestCase{
 
         /**
          * The main computation performed by this task.
-         *
          * @return the result of the computation
          */
         @Override
         protected Long compute() {
             Long sum = 0L;
-
             if ((max - min) <= threshold) {
                 for (long i = min; i <= max; i++) {
                     sum = sum + i;
@@ -93,6 +90,29 @@ public class ForkJoinTest extends TestCase{
             return sum;
         }
     }
+
+    /**
+     * 无返回值的 任务
+     */
+    public static class Job extends RecursiveAction{
+
+        /**
+         * The main computation performed by this task.
+         */
+        @Override
+        protected void compute() {
+
+            //计算工作等等
+            //1、适用于各种定时任务，负责执行即可，无需在意执行结果
+            //2、适用于数据批量整理等等，整完即可。
+
+
+        }
+    }
+
+
+
+
 
 
 }
