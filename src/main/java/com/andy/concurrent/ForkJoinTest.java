@@ -105,8 +105,8 @@ public class ForkJoinTest extends TestCase{
             future.get();
             System.out.println("结束后:"+System.currentTimeMillis());
             /**
-             * 开始前:1514271848565
-             * 结束后:1514271849153
+             * 开始前:1514271925106
+             * 结束后:1514271926617
              */
         } catch (InterruptedException e) {
             e.printStackTrace();
