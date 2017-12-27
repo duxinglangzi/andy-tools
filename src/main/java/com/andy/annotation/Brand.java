@@ -11,7 +11,6 @@ public class Brand implements Serializable {
     private String name;// 品牌名称
     @Size(min = 10, max = 100)
     private String alias;// 别名
-    private String photoPath;// 图片地址
     private String operator;// 操作人
 
     @Meaning(value = "Integr类型年龄")
@@ -19,8 +18,6 @@ public class Brand implements Serializable {
 
     @Meaning(value = "long类型年龄")
     private Long longAge;
-
-    private int intAge;
 
 
     public String getName() {
@@ -39,14 +36,6 @@ public class Brand implements Serializable {
         this.alias = alias;
     }
 
-    public String getPhotoPath() {
-        return photoPath;
-    }
-
-    public void setPhotoPath(String photoPath) {
-        this.photoPath = photoPath;
-    }
-
     public String getOperator() {
         return operator;
     }
@@ -57,7 +46,7 @@ public class Brand implements Serializable {
 
     @Meaning(value = "我擦泪")
     public String getFuck() {
-        return "你妈蛋";
+        return "我真是服了气了";
     }
 
     public Integer getAge() {
@@ -74,14 +63,6 @@ public class Brand implements Serializable {
 
     public void setLongAge(Long longAge) {
         this.longAge = longAge;
-    }
-
-    public int getIntAge() {
-        return intAge;
-    }
-
-    public void setIntAge(int intAge) {
-        this.intAge = intAge;
     }
 
 }
