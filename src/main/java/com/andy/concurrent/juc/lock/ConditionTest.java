@@ -6,7 +6,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * <p>ClassName: 线程通讯的简单测试 </p>
+ * <p>ClassName: 条件对象 实用、简单概念 </p>
  * <p>Description: </p>
  * <p>Company:雅座在线（北京）科技发展有限公司 </p>
  * <p>@author wuqiong  2017/12/22 11:30 </p>
@@ -14,19 +14,28 @@ import java.util.concurrent.locks.ReentrantLock;
 public class ConditionTest {
 
     private final Lock lock = new ReentrantLock();//锁对象
-    private final Condition condition = lock.newCondition();//工作对象条件
+
+
+    /**
+     * 条件对象: 在一个锁内，可以有多个条件对象， 用来在同一个锁内 进行多种业务处理等等
+     * 用法 ： 当调用 await() 方法时，当前线程会释放该条件对象关联的锁， 并放弃 monitor(监视器) .
+     * 当调用 signal()、signalAll() 方法时, 当前线程会重新得带 当前条件对象关联的锁，并且会继续执行当前线程余下的代码
+     * <p>
+     * 举例:  当 Thread1 得到 object1 的监控(monitor)时, 调用 object1.await() 方法进行阻塞 并释放 object1 锁持有的 monitor
+     * 此时 Thread2 获取到 object1 的监控(monitor)， 调用 object1.signal() 方法。 此时Thread1重新获取到monitor, object1阻塞失效，并继续向下执行代码
+     */
+    private final Condition condition = lock.newCondition();//工作条件对象
 
 
     public void work() {
         lock.lock();
         try {
-            try {
-                System.out.println("Begin Work 开始干活~ ");
-                condition.await();
-                System.out.println("Begin End 干完了 ~ ");
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            System.out.println("Begin Work 开始干活~ ");
+//                condition.await(3,TimeUnit.SECONDS);
+            condition.await();//释放当前锁，
+            System.out.println("Begin End 干完了 ~ ");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         } finally {
             lock.unlock();
         }
@@ -54,7 +63,6 @@ public class ConditionTest {
         TimeUnit.SECONDS.sleep(3);
         test.continueWork();
     }
-
 
 
 }
