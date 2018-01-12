@@ -15,7 +15,6 @@ import java.nio.charset.Charset;
 
 /**
  * <p>Description: ES 请求工具类  </p>
- * <p>Company:雅座在线（北京）科技发展有限公司 </p>
  * @author wuqiong  2017年6月7日
  */
 public class EsRequestApi {

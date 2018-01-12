@@ -4,7 +4,6 @@ package com.andy.common.weixinsupport.model;
 /**
  * <p>ClassName: 微信页面签名 </p> 
  * <p>Description: 描述该类实现了什么功能 </p>
- * <p>Company:雅座在线（北京）科技发展有限公司 </p>
  * @author wuqiong  2015年9月28日
  */
 public class WXJSSDKConfig {

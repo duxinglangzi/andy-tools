@@ -21,7 +21,6 @@ import java.util.List;
 
 /**
  * <p>Description: ES 数据组装 </p>
- * <p>Company:雅座在线（北京）科技发展有限公司 </p>
  * @author wuqiong  2017年6月7日
  */
 public class EsResponseHandler {

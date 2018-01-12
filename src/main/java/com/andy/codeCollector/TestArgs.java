@@ -5,7 +5,6 @@ import java.lang.reflect.Field;
 /**
  * <p>ClassName: 用来测试引用传递 和 值传递的概念 </p>
  * <p>Description: </p>
- * <p>Company:雅座在线（北京）科技发展有限公司 </p>
  * <p>@author wuqiong  2017/11/20 15:03 </p>
  */
 public class TestArgs {

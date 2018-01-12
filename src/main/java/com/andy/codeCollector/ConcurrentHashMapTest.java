@@ -10,7 +10,6 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * <p>Description: 描述该类实现了什么功能 </p>
- * <p>Company:雅座在线（北京）科技发展有限公司 </p>
  * @author wuqiong  2017年8月18日
  */
 public class ConcurrentHashMapTest {

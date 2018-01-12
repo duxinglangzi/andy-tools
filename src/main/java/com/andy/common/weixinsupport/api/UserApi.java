@@ -16,7 +16,6 @@ import java.util.List;
 /**
  * <p>ClassName: 本方法 实现了基础公众号  获取用户信息的 接口 </p> 
  * <p>Description: 描述该类实现了什么功能 </p>
- * <p>Company:雅座在线（北京）科技发展有限公司 </p>
  * @author wuqiong  2015年11月10日
  */
 public class UserApi {

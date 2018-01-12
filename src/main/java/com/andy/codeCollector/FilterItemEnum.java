@@ -4,7 +4,6 @@ package com.andy.codeCollector;
 /**
  * <p>ClassName:CheckFilterItems.java </p>
  * <p>Description: 校验过滤条件类 的传值是否有误 </p>
- * <p>Company:雅座在线（北京）科技发展有限公司 </p>
  * @author wuqiong  2016年7月14日
  */
 public enum FilterItemEnum {

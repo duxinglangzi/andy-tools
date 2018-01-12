@@ -4,7 +4,6 @@ package com.andy.common.weixinsupport.model;
 /**
  * <p>ClassName:网页授权 可以获取的 用户基本信息 </p> 
  * <p>Description: 该类区别于 基础支持中的 用户基本信息 </p>
- * <p>Company:雅座在线（北京）科技发展有限公司 </p>
  * @author fuji  2015年10月10日
  */
 public class OAuthUserInfo extends BaseEntity {

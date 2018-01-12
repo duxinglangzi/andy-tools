@@ -12,7 +12,6 @@ import java.util.concurrent.ConcurrentMap;
 
 /**
  * <p>Description: 实现java日期格式化 </p>
- * <p>Company:雅座在线（北京）科技发展有限公司 </p>
  * @author wuqiong  2017年8月31日
  */
 public final class SimpleDateUtils {

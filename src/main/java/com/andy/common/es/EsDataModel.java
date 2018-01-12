@@ -4,7 +4,6 @@ import java.io.Serializable;
 
 /**
  * <p>Description: ES读取数据单独对象类,所有模型对象必须继承此类,防止子类  </p>
- * <p>Company:雅座在线（北京）科技发展有限公司 </p>
  * @author wuqiong  2017年6月7日
  */
 public class EsDataModel implements Serializable {

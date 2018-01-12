@@ -5,7 +5,6 @@ import com.alibaba.fastjson.JSONArray;
 /**
  * <p>ClassName: 公众号关注用户基本信息 </p> 
  * <p>Description: 该用户基本信息 可以通过公众号 token 和 openid获取。却别于网页授权获取的用户基本信息 </p>
- * <p>Company:雅座在线（北京）科技发展有限公司 </p>
  * @author wuqiong  2015年11月10日
  */
 public class WXUserInfo extends BaseEntity {

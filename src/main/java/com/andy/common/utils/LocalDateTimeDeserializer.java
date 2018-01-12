@@ -18,7 +18,6 @@ import java.time.ZoneId;
 /**
  * <p>ClassName: 自定义FastJson转换LocalDateTime操作 </p>
  * <p>Description: </p>
- * <p>Company:雅座在线（北京）科技发展有限公司 </p>
  * <p>@author wuqiong  2017/11/14 17:30 </p>
  */
 public class LocalDateTimeDeserializer implements ObjectSerializer, ObjectDeserializer {

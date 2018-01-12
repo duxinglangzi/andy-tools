@@ -4,7 +4,6 @@ import java.util.List;
 
 /**
  * <p>Description: 批量获取用户信息接口 </p>
- * <p>Company:雅座在线（北京）科技发展有限公司 </p>
  * @author wuqiong  2017年4月13日
  */
 public class WXUserInfoList extends BaseEntity {

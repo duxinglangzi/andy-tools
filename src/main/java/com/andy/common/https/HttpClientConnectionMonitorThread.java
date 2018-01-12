@@ -6,7 +6,6 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * <p>Description: 使用管理器，管理HTTP连接池 无效链接定期清理功能</p>
- * <p>Company:雅座在线（北京）科技发展有限公司</p>
  * @author wuqiong 2017年8月28日
  */
 public class HttpClientConnectionMonitorThread extends Thread {
