@@ -11,16 +11,14 @@ import org.apache.http.util.EntityUtils;
 import java.io.IOException;
 
 /**
- * <p>ClassName:  </p>
+ * <p>ClassName: 测试钉钉 开发文档 接口是否可用等等  </p>
  * <p>Description: </p>
- * <p>Company:雅座在线（北京）科技发展有限公司 </p>
  * <p>@author wuqiong  2018/1/10 10:58 </p>
  */
 public class DingtalkToken extends TestCase {
 
-    public static final String corpid = "ding0fbecc7ad8833f17";
-    public static final String corpsecret = "sGBDXzcMYIba-bFu4XBI2vvxlHzLlBgzNrY0Hb5Sr75IGcWmIHyBePjZoho6c3Kbu";
-
+    public static final String corpid = "...";
+    public static final String corpsecret = "...";
     public static final String accessToken = "744f9e4196363957ba1692d0f3f06717";
 
     //1、获取token
@@ -37,7 +35,7 @@ public class DingtalkToken extends TestCase {
                 HttpEntity entity = httpResponse.getEntity();
                 String str = EntityUtils.toString(entity);
                 System.out.println(str);
-                //{"errcode":0,"access_token":"744f9e4196363957ba1692d0f3f06717","errmsg":"ok","expires_in":7200}
+                //{"errcode":0,"access_token":"11","errmsg":"ok","expires_in":7200}
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -84,8 +82,8 @@ public class DingtalkToken extends TestCase {
                 HttpEntity entity = response.getEntity();
                 System.out.println(EntityUtils.toString(entity));
                 //todo 显示用户列表内容
-                //{"errcode":0,"hasMore":false,"errmsg":"ok","userlist":[{"name":"朱鹏","userid":"01496540072099"},{"name":"吴琼","userid":"01496417101885"},
-                // {"name":"王道健","userid":"0250680129591357"},{"name":"刘明仁","userid":"096309366621026443"},{"name":"孙东峰","userid":"01496458593051"}]}
+                //{"errcode":0,"hasMore":false,"errmsg":"ok","userlist":[{"name":"23","userid":"01496540072099"},{"name":"51","userid":"01496417101885"},
+                // {"name":"1634","userid":"0250680129591357"},{"name":"134","userid":"096309366621026443"},{"name":"15","userid":"01496458593051"}]}
             }
         } catch (IOException e) {
             System.out.println(e.getStackTrace());
