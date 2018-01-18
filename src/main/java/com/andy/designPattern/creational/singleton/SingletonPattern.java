@@ -5,7 +5,6 @@ import org.junit.Assert;
 /**
  * <p>ClassName:单例模式  </p>
  * <p>Description: 单例模式，即一个类只允许存在一个实例。 </p>
- * <p>Company:雅座在线（北京）科技发展有限公司 </p>
  * <p>@author wuqiong  2017/11/30 14:41 </p>
  */
 public class SingletonPattern{

@@ -10,7 +10,6 @@ import java.util.concurrent.atomic.AtomicLong;
 /**
  * <p>ClassName: Fork-Join框架的简单实用 </p>
  * <p>Description: 在此准备一个  </p>
- * <p>Company:雅座在线（北京）科技发展有限公司 </p>
  * <p>@author wuqiong  2017/12/25 16:14 </p>
  */
 public class ForkJoinTest extends TestCase{

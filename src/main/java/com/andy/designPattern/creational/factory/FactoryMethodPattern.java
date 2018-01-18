@@ -3,7 +3,6 @@ package com.andy.designPattern.creational.factory;
 /**
  * <p>ClassName: 工厂方法模式 </p>
  * <p>Description: </p>
- * <p>Company:雅座在线（北京）科技发展有限公司 </p>
  * <p>@author wuqiong  2017/12/22 11:09 </p>
  */
 public class FactoryMethodPattern {

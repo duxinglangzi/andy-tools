@@ -3,7 +3,6 @@ package com.andy.designPattern.creational.factory;
 /**
  * <p>ClassName: 简单工厂 </p>
  * <p>Description: 简单工厂模式，简单来说就是由一个工厂类根据传入的参数，动态决定应该创建哪一个产品类（该模式并不属于GOF 23） </p>
- * <p>Company:雅座在线（北京）科技发展有限公司 </p>
  * <p>@author wuqiong  2017/11/30 14:39 </p>
  */
 public class SimpleFactoryPattern {
