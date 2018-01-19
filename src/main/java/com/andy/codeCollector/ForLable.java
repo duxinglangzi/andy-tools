@@ -4,7 +4,7 @@ package com.andy.codeCollector;
  * <p>Description: 测试for循环 break lable,continue lable 功能 </p>
  * @author wuqiong  2018年1月19日
  */
-public class BreakLable {
+public class ForLable {
 	
 	/**
 	 * 方法描述: java 标签操作
