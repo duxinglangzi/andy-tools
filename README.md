@@ -6,8 +6,12 @@
 
 ## 工程目录
 - [并发](https://github.com/duxinglangzi/andy-tools/tree/master/src/main/java/com/andy/concurrent)
-    - [juc-atomic](https://github.com/duxinglangzi/andy-tools/tree/master/src/main/java/com/andy/concurrent/juc/atomic)
+    - [synchronizer](https://github.com/duxinglangzi/andy-tools/tree/master/src/main/java/com/andy/concurrent/synchronizer)
+    - [juc](https://github.com/duxinglangzi/andy-tools/tree/master/src/main/java/com/andy/concurrent/juc)
+        - [atomic](https://github.com/duxinglangzi/andy-tools/tree/master/src/main/java/com/andy/concurrent/juc/atomic)
+        - [lock](https://github.com/duxinglangzi/andy-tools/tree/master/src/main/java/com/andy/concurrent/juc/lock)
     - [消费者-生产者](https://github.com/duxinglangzi/andy-tools/tree/master/src/main/java/com/andy/concurrent/consumerAndProducer)
+    - [thread](https://github.com/duxinglangzi/andy-tools/tree/master/src/main/java/com/andy/concurrent/thread)
 - [设计模式](https://github.com/duxinglangzi/andy-tools/tree/master/src/main/java/com/andy/designPattern)
     - [创建模式(Creational)](https://github.com/duxinglangzi/andy-tools/tree/master/src/main/java/com/andy/designPattern/creational)
         - [简单工厂(factory)](https://github.com/duxinglangzi/andy-tools/tree/master/src/main/java/com/andy/designPattern/creational/factory)
