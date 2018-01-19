@@ -14,5 +14,12 @@
         - [单例模式(singleton)](https://github.com/duxinglangzi/andy-tools/tree/master/src/main/java/com/andy/designPattern/creational/singleton)
     - [结构模式(Structural)]
     - [行为模式(Behavioral)](https://github.com/duxinglangzi/andy-tools/tree/master/src/main/java/com/andy/designPattern/behavioral)
+- [算法排序](https://github.com/duxinglangzi/andy-tools/tree/master/src/main/java/com/andy/algorithm)
+- [Jvm相关](https://github.com/duxinglangzi/andy-tools/tree/master/src/main/java/com/andy/jvm)
+- [Java注解](https://github.com/duxinglangzi/andy-tools/tree/master/src/main/java/com/andy/annotation)
 - [代码收藏夹](https://github.com/duxinglangzi/andy-tools/tree/master/src/main/java/com/andy/codeCollector)
-- [工具包](https://github.com/duxinglangzi/andy-tools/tree/master/src/main/java/com/andy/utils)
+- [常用工具](https://github.com/duxinglangzi/andy-tools/tree/master/src/main/java/com/andy/common)
+    -[Http相关](https://github.com/duxinglangzi/andy-tools/tree/master/src/main/java/com/andy/common/https)
+    -[微信接口](https://github.com/duxinglangzi/andy-tools/tree/master/src/main/java/com/andy/common/weixinsupport)
+    -[小工具](https://github.com/duxinglangzi/andy-tools/tree/master/src/main/java/com/andy/common/utils)
+    
