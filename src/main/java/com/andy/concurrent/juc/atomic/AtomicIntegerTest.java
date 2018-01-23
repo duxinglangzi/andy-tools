@@ -24,7 +24,13 @@ public class AtomicIntegerTest {
 
         int maxThreads = 10000;
         for (int i = 0; i < maxThreads; i++) {
-            Thread thread = new Thread(() -> increment());//jdk 8 表达式
+//            Thread thread = new Thread(() -> increment());//jdk 8 表达式
+            Thread thread = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    increment();
+                }
+            });
             thread.start();
         }
 
