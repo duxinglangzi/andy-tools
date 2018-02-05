@@ -1,4 +1,4 @@
-package com.yazuo.zeus.expert.web.common.utils;
+package com.andy.common.utils;
 
 import java.time.*;
 import java.util.Date;
@@ -11,6 +11,7 @@ import java.util.Date;
  */
 public class LocalDateTimeUtils {
 
+    /** 使用系统默认时区 */
     public static final ZoneId ZONE_ID = ZoneId.systemDefault();
 
     /**
@@ -20,7 +21,6 @@ public class LocalDateTimeUtils {
      * @author wuqiong  2018/1/29 11:17
      */
     public static Date localDateToDate(final LocalDate localDate){
-        /** 使用系统默认时区*/
         ZonedDateTime zonedDateTime = localDate.atStartOfDay(ZONE_ID);
         return Date.from(zonedDateTime.toInstant());
     }
@@ -32,35 +32,35 @@ public class LocalDateTimeUtils {
      * @author wuqiong  2018/1/29 11:21
      */
     public static Date localDateTimeToDate(final LocalDateTime localDateTime){
-        /** 使用系统默认时区*/
         ZonedDateTime zonedDateTime = localDateTime.atZone(ZONE_ID);
         return Date.from(zonedDateTime.toInstant());
+    }
+
+    /**
+     * 方法描述: 将java.utils.Date 转化为 java.time.LocalDateTime
+     * @params date
+     * @return LocalDateTime
+     * @author wuqiong  2018/2/5 10:08
+     */
+    public static LocalDateTime dateToLocalDateTime(final Date date){
+        return LocalDateTime.ofInstant(date.toInstant(), ZONE_ID);
     }
 
     /**
      * 方法描述: 获取两个时间差
      * @params LocalDateTime beginTime,LocalDateTime endTime
      * @return Duration 返回一个持续时间
-     *  <p>toNanos()//纳秒</p>
-     *  <p>toMillis()//毫秒</p>
-     *  <p>toMinutes()//分钟</p>
-     *  <p>toHours()//小时</p>
-     *  <p>toDays()//天数</p>
+     *  <p>Duration.toNanos()//纳秒</p>
+     *  <p>Duration.toMillis()//毫秒</p>
+     *  <p>Duration.toMinutes()//分钟</p>
+     *  <p>Duration.toHours()//小时</p>
+     *  <p>Duration.toDays()//天数</p>
      * @author wuqiong  2018/1/29 13:05
      */
-    public static Duration localBetween(final LocalDateTime beginTime,final LocalDateTime endTime){
+    public static Duration localBetween(final LocalDateTime beginTime, final LocalDateTime endTime){
         return Duration.between(beginTime,endTime);
     }
 
-    /**
-     * 方法描述: 将 date 转化成LocalDateTime
-     * @params date
-     * @return LocalDateTime
-     * @author wuqiong  2018/1/30 19:49
-     */
-    public static LocalDateTime dateToLocalDateTime(final Date date){
-        return LocalDateTime.ofInstant(date.toInstant(), ZONE_ID);
-    }
 
 
 
