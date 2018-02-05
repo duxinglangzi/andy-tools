@@ -1,4 +1,4 @@
-package com.yazuo.zeus.expert.web.common.utils;
+package com.andy.common.utils;
 
 import com.andy.codeCollector.ObjectUtils;
 
