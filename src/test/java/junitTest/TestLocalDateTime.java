@@ -4,6 +4,7 @@ import junit.framework.TestCase;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 
 /**
  * <p>ClassName: 日期操作 </p>
@@ -28,7 +29,8 @@ public class TestLocalDateTime extends TestCase {
         System.out.println(localDate.getDayOfYear());           //当前年的 第几天， 返回值区间  1-366之间
         System.out.println(localDate.minusDays(1L).getDayOfWeek().getValue()); //返回当前天是本周的 第几天， 数值区间 1-7
 
-
+        System.out.println(System.currentTimeMillis());
+        System.out.println(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant().toEpochMilli());//获取毫秒数
 
     }
 
