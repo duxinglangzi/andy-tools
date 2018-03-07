@@ -8,6 +8,9 @@ import java.util.concurrent.Exchanger;
  * 例子中服务生线程往空的杯子里倒水，顾客线程从装满水的杯子里喝水，
  * 然后通过Exchanger双方互换杯子，服务生接着往空杯子里倒水，顾客接着喝水，
  * 然后交换，如此周而复始。
+ *
+ * <p> 两个线程信息可以互换，同时如果能够进行阻塞 。<p/>
+ *
  * <p>Company:雅座在线（北京）科技发展有限公司 </p>
  * <p>@author wuqiong  2017/12/25 15:58 </p>
  */
@@ -45,6 +48,10 @@ public class ExchangerTest {
         }
     }
 
+    /**
+     * Exchanger 交换器 必须是两个线程数据互相交换，
+     *
+     */
     public static void testExchanger() {
         //  初始化一个Exchanger，并规定可交换的信息类型是杯子
         final Exchanger<Cup> exchanger = new Exchanger<Cup>();
