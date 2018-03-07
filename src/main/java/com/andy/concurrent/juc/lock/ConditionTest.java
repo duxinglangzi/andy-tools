@@ -30,10 +30,11 @@ public class ConditionTest {
     public void work() {
         lock.lock();
         try {
-            System.out.println("Begin Work 开始干活~ ");
+            System.out.println(Thread.currentThread().getName()+"----- Begin Work 开始干活~ ");
 //                condition.await(3,TimeUnit.SECONDS);
+
             condition.await();//释放当前锁，
-            System.out.println("Begin End 干完了 ~ ");
+            System.out.println(Thread.currentThread().getName() + "----- End 干完了 ~ ");
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
@@ -58,6 +59,15 @@ public class ConditionTest {
                 test.work();
             }
         }).start();
+        ConditionTest test1 = new ConditionTest();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                test1.work();
+            }
+        }).start();
+        TimeUnit.SECONDS.sleep(1);
+        test1.continueWork();
 
         //等待3秒后唤醒，继续工作。
         TimeUnit.SECONDS.sleep(3);
