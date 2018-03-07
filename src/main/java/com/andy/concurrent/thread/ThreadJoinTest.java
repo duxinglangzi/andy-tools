@@ -9,7 +9,7 @@ public class ThreadJoinTest{
 
     public static void main(String[] args) {
 
-//        try {
+        try {
             Thread t1= new Thread(new Runnable() {
                 @Override
                 public void run() {
@@ -17,7 +17,7 @@ public class ThreadJoinTest{
                 }
             });
             t1.start();
-//            t1.join();
+            t1.join();
 
             Thread t2= new Thread(new Runnable() {
                 @Override
@@ -26,10 +26,18 @@ public class ThreadJoinTest{
                 }
             });
             t2.start();
-//            t2.join();
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
+            t2.join();
+            Thread t3= new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    System.out.println(Thread.currentThread().getName()+"--t3 测试");
+                }
+            });
+            t3.start();
+            t3.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         System.out.println("全都执行完毕");
 
 
@@ -37,17 +45,22 @@ public class ThreadJoinTest{
          * 启用join 时，输出如下
          * Thread-0--t1 测试
          * Thread-1--t2 测试
+         * Thread-2--t3 测试
          * 全都执行完毕
          */
 
 
         /**
          * 注释 join 时，输出如下
-         *  全都执行完毕
-         *  Thread-0--t1 测试
-         *  Thread-1--t2 测试
+         * Thread-0--t1 测试
+         * 全都执行完毕
+         * Thread-2--t3 测试
+         * Thread-1--t2 测试
          */
 
+        /**
+         *  该知识点 涉及 面试题 ： 如何让三个线程 有序的执行完毕
+         */
     }
 
 
