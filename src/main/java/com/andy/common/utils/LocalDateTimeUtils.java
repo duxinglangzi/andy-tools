@@ -4,15 +4,13 @@ import java.time.*;
 import java.util.Date;
 
 /**
- * <p>ClassName: 日期调整类 </p>
- * <p>Description: </p>
- * <p>Company:雅座在线（北京）科技发展有限公司 </p>
+ * <p>Description: 日期调整类 </p>
  * <p>@author wuqiong  2018/1/29 11:09 </p>
  */
 public class LocalDateTimeUtils {
 
     /** 使用系统默认时区 */
-    public static final ZoneId ZONE_ID = ZoneId.systemDefault();
+    private static final ZoneId ZONE_ID = ZoneId.systemDefault();
 
     /**
      * 方法描述: 将java.time.LocalDate 转化为 java.util.Date
