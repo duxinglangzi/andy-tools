@@ -12,8 +12,8 @@ public class ThreadYieldTest {
     public void test_yield(){
 
         for (int i = 0 ;i<3;i++){
-            System.out.println(Thread.currentThread().getName()+" 第 "+i+" 号" + Thread.currentThread().getPriority());
             Thread.yield();
+            System.out.println(Thread.currentThread().getName()+" 第 "+i+" 号" + Thread.currentThread().getPriority());
         }
 
 
@@ -30,8 +30,8 @@ public class ThreadYieldTest {
     public static void main(String[] args) {
         ThreadYieldTest threadYieldTest = new ThreadYieldTest();
         Thread thread2 = new Thread(() -> threadYieldTest.test_yield());
-        System.out.println(thread2.getPriority()+"第一个");
         thread2.setPriority(1);
+        System.out.println(thread2.getPriority()+"第一个");
 
         Thread thread =new Thread(() -> threadYieldTest.test_yield());
         thread.setPriority(10);
