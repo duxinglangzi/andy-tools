@@ -87,6 +87,7 @@ public class SingletonPattern{
      * 使用静态内部类 static nested class ,这种方法是《Effective Java》上所推荐的
      */
     static class Singleton5 {
+        //静态内部类， 不能忘记啊。
         private static class SingletonHolder {
             private static final Singleton5 INSTANCE = new Singleton5();
         }
