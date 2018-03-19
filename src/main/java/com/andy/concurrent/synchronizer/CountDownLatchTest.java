@@ -10,7 +10,7 @@ import java.util.concurrent.Executors;
  *
  * @author wuqiong  2017年8月10日
  */
-public class countDownLatchTest {
+public class CountDownLatchTest {
 
 
     // 模拟了100米赛跑，10名选手已经准备就绪，裁判一声令下。当所有人都到达终点时，比赛结束。
