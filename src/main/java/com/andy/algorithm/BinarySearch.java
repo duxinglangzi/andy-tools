@@ -7,8 +7,8 @@ package com.andy.algorithm;
 public class BinarySearch {
 
     public static void main(String[] args) {
-        int[] arrays={1,2,3,4,5,6,7,8,9,10,11,22};
-        System.out.println("当前值是否存在于集合中:"+search(arrays,5));
+        int[] arrays={3,4,5,8,8,8,8,10,13,14};
+        System.out.println("当前值是否存在于集合中:"+search(arrays,8));
 
     }
 
@@ -29,6 +29,7 @@ public class BinarySearch {
             } else if (arrays[mid] < keyword) {
                 low = mid + 1;
             } else if (arrays[mid] == keyword) {
+                System.out.println(mid);
                 return true;
             }
         }
