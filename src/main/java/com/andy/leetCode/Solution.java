@@ -12,14 +12,14 @@ import java.util.Map;
 public class Solution {
 
     /**
-     * 给定一个整形数组和一个整数target，返回2个元素的下标，它们满足相加的和为target。
+     * 给定一个整数数组array 和一个整数target，返回数组内2个元素的下标，它们的值满足 相加的和为target。
      * 你可以假定每个输入，都会恰好有一个满足条件的返回结果。
      */
     public static void main(String[] args) {
-        int[] nums = {5,1,3,10,26,35};
-        int target = 26;
+        int[] nums = {-1, 0, 1, 2, -1, -4};
+        int target = 0;
 
-        int[] result = binarySearch(nums,target);
+        int[] result = threeSum(nums,target);
         //System.out.println(result);
         System.out.println(Arrays.toString(result));
     }
@@ -71,10 +71,10 @@ public class Solution {
      * @return int[]
      * @author andy 2018年3月22日 下午3:43:51
      */
-    public static int[] binarySearch(int[] nums,int target){
+    public static int[] threeSum(int[] nums,int target){
         int m =0;
         int[] result = null;
-        while (result == null){
+        while (result == null && nums.length > m){
             if(nums[m] < target){
                 int tar = target - nums[m];
                 Map<Integer, Integer> map = new HashMap<>();
