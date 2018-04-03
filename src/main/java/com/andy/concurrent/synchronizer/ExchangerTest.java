@@ -11,7 +11,6 @@ import java.util.concurrent.Exchanger;
  *
  * <p> 两个线程信息可以互换，同时如果能够进行阻塞 。<p/>
  *
- * <p>Company:雅座在线（北京）科技发展有限公司 </p>
  * <p>@author wuqiong  2017/12/25 15:58 </p>
  */
 public class ExchangerTest {

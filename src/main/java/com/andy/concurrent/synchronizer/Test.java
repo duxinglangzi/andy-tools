@@ -5,7 +5,6 @@ import java.util.concurrent.Exchanger;
 /**
  * <p>ClassName:  </p>
  * <p>Description: </p>
- * <p>Company:雅座在线（北京）科技发展有限公司 </p>
  * <p>@author wuqiong  2018/3/7 13:36 </p>
  */
 public class Test {
@@ -54,18 +53,18 @@ public class Test {
             }
         }).start();
 
-//        new Thread(new Runnable() {
-//            @Override
-//            public void run() {
-//                try {
-//                    String fyck=exchanger.exchange("我的天啊  4");
-//                    System.out.println("第四个线程打印 :" + fyck);
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
-//
-//            }
-//        }).start();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    String fyck=exchanger.exchange("我的天啊  4");
+                    System.out.println("第四个线程打印 :" + fyck);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }).start();
     }
 
 
