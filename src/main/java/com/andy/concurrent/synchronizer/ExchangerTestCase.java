@@ -7,7 +7,7 @@ import java.util.concurrent.Exchanger;
  * <p>Description: </p>
  * <p>@author wuqiong  2018/3/7 13:36 </p>
  */
-public class Test {
+public class ExchangerTestCase {
 
     public static void main(String[] args) {
 
