@@ -1,6 +1,7 @@
 package com.andy.concurrent;
 
 
+import java.util.Arrays;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.CountDownLatch;
@@ -66,7 +67,7 @@ public class Threads {
             //执行等待，完毕后 进行 输出
             countDownLatch.await();
             System.out.println("执行时间: " + (System.currentTimeMillis() - start));
-            System.out.println("maps 长度 ： "+concurrentMap.size());
+            System.out.println("maps 长度 ： "+ Arrays.toString(concurrentMap.keySet().toArray()));
 
 
         } catch (InterruptedException e) {
