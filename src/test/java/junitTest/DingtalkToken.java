@@ -20,7 +20,7 @@ public class DingtalkToken extends TestCase {
     public static final String corpid = "...";
     public static final String corpsecret = "...";
     //去掉一个 最后一个字母
-    public static final String accessToken = "744f9e4196363957ba1692d0f3f06717";
+    public static final String accessToken = "9de2842d01913d64b22c6f023ad0c25e";
 
     //1、获取token
     public void test_get_token() {
