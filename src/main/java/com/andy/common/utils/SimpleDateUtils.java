@@ -92,7 +92,6 @@ public final class SimpleDateUtils {
 
     /**
      * <p>Description: 日期格式化模式枚举 </p>
-     * <p>Company:雅座在线（北京）科技发展有限公司 </p>
      * @author wuqiong  2017年8月31日
      */
     private enum Patten{
