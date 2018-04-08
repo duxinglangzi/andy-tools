@@ -21,7 +21,7 @@ public class Test1 {
 
 
     /**
-     * @description:
+     * @description： 不可能的可能
      * @params [str, inte, baseEntity]
      * @return java.lang.String
      * @author wuqiong 2018-04-08 13:08
