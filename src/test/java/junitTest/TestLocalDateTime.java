@@ -31,6 +31,8 @@ public class TestLocalDateTime extends TestCase {
 
         System.out.println(System.currentTimeMillis());
         System.out.println(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant().toEpochMilli());//获取毫秒数
+        System.out.println("test github push ");
+
 
     }
 
