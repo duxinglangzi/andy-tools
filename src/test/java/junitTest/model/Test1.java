@@ -11,18 +11,18 @@ public class Test1 {
 
     /**
      * @Description: 测试方法注释
-     * @Param [args]
-     * @Return void
+     * @param args
+     * @return void
      * @Author wuqiong 2018/4/8 12:47
      */
     public static void main(String[] args) {
-
+        returnStringArgs("asd",2123,new BaseEntity());
     }
 
 
     /**
      * @description： 不可能的可能
-     * @params [str, inte, baseEntity]
+     * @param [str, inte, baseEntity]
      * @return java.lang.String
      * @author wuqiong 2018-04-08 13:08
      */
