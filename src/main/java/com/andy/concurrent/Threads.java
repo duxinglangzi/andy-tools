@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
  *  测试多线程处理任务, 多线程处理多项任务，使用计数器完成计数，
  *  当计数器调整为零时，可以得出所有任务执行完毕。此时进行数据读取。
  * </p>
- * @author wuqiong 2018年2月23日
+ * @author wuqiong 2018年4月3日
  */
 public class Threads {
 
