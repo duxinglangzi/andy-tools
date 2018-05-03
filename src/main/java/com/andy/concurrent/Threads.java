@@ -73,7 +73,6 @@ public class Threads {
             System.out.println("执行时间: " + (System.currentTimeMillis() - start));
             System.out.println("maps 长度 ： "+ Arrays.toString(concurrentMap.keySet().toArray()));
 
-
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
