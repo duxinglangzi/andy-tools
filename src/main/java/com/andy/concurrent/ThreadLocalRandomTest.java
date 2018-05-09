@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * <p>Description: </p>
+ * <p>Description: 测试多线程下进行随机数获取 </p>
  * <p>@Author wuqiong  2018/5/3 </p>
  */
 public class ThreadLocalRandomTest {
