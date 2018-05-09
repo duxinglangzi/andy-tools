@@ -1,1 +1,7 @@
-这是一个文件，用来测试 git rebase 命令和 merge 命令
+
+这是一个文件，用来测试 git rebase 命令和 merge 命
+=======
+
+在这里增加进行和 github 冲突，用来测试合并
+
+>>>>>>> Stashed changes
