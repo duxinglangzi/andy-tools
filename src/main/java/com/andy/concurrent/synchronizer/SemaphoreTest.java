@@ -5,8 +5,6 @@ import java.util.concurrent.Semaphore;
 
 /**
  * <p>Description: 信号量 测试 </p>
- * <p>Company:雅座在线（北京）科技发展有限公司 </p>
- *
  * @author wuqiong  2017年8月11日
  */
 public class SemaphoreTest {
