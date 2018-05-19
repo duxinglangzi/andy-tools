@@ -1,10 +1,14 @@
 package junitTest;
 
+import com.andy.common.utils.LocalDateTimeUtils;
 import junit.framework.TestCase;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.ZoneId;
+import java.time.temporal.TemporalAdjusters;
+import java.util.Date;
 
 /**
  * <p>ClassName: 日期操作 </p>
@@ -32,6 +36,29 @@ public class TestLocalDateTime extends TestCase {
         System.out.println(System.currentTimeMillis());
         System.out.println(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant().toEpochMilli());//获取毫秒数
         System.out.println("test github push ");
+
+
+
+
+
+
+            LocalDate localDate1 = localDate.minusMonths(1L);
+
+
+            System.out.println(localDate1.with(TemporalAdjusters.firstDayOfMonth()));
+
+            System.out.println(LocalDateTimeUtils.localDateToDate(localDate1.with(TemporalAdjusters.firstDayOfMonth())));
+            System.out.println(
+                    LocalDateTimeUtils.localDateTimeToDate(
+                            LocalDateTime.of(localDate1.with(TemporalAdjusters.lastDayOfMonth()),LocalTime.of(23,59,59))));
+
+            Date date = LocalDateTimeUtils.localDateToDate(LocalDateTime.now().toLocalDate().minusMonths(1L));
+            System.out.println(LocalDateTimeUtils.dateToLocalDateTime(date).toString());
+
+
+
+
+
 
 
     }
