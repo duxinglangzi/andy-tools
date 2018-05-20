@@ -11,6 +11,7 @@
 
     <properties>
         <!--设置工程的编码为utf8，此配置必须有，否则汉字无法编译 -->
+        <!-- 这里做一次git commit -amend命令的测试  -->
         <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
         <commons.lang.version>2.6</commons.lang.version>
         <junit.version>4.12</junit.version>
