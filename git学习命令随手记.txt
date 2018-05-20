@@ -7,6 +7,11 @@
   低头思故乡。
 
 
+1、commit --amend 命令学习：
+  如果当某一次(git commit -m "git description") 提交之后，突然意识到可能注释写错了。
+  那么，可以使用 git commit -amend -m "new git description" 来进行修正。同时，上一次提交的commitID也会消失在 git log 提交日志中，
+  但是，如果你有幸记住了第一次的CommitId ，那么可以使用git show commitID 来查看上次的注释内容
+
 
 
 
