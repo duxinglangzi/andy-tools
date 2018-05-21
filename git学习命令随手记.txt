@@ -11,6 +11,7 @@
   如果当某一次(git commit -m "git description") 提交之后，突然意识到可能注释写错了。
   那么，可以使用 git commit -amend -m "new git description" 来进行修正。同时，上一次提交的commitID也会消失在 git log 提交日志中，
   但是，如果你有幸记住了第一次的CommitId ，那么可以使用git show commitID 来查看上次的注释内容
+  (注意事项) ： 这里需要注意的是，如果上一次的commitID 被推送至远程仓库(git push)后 ，那么这次commitID 注释内容将无法进行再次修改
 
 
 
