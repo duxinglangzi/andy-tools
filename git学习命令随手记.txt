@@ -13,7 +13,12 @@
   但是，如果你有幸记住了第一次的CommitId ，那么可以使用git show commitID 来查看上次的注释内容
   (注意事项) ： 这里需要注意的是，如果上一次的commitID 被推送至远程仓库(git push)后 ，那么这次commitID 注释内容将无法进行再次修改
 
+2、git blame [filename] -L 开始行号,结束行号
+  其中 -L 一定要大写。
 
+3、git cherry-pink [commitID]  是用来将同一个仓库内不同分支提交的内容切换到当前分支上来。
+
+4、git
 
 
 
