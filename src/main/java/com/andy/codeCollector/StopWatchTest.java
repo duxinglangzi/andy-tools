@@ -28,8 +28,8 @@ public class StopWatchTest {
         StopWatch stopWatch = STOP_WATCH_THREAD_LOCAL.get();
         if(stopWatch==null){
             stopWatch = new StopWatch();
-            stopWatch.start();
             STOP_WATCH_THREAD_LOCAL.set(stopWatch);
+            stopWatch.start();
         }
     }
 
