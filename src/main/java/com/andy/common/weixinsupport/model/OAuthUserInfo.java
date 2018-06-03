@@ -4,7 +4,7 @@ package com.andy.common.weixinsupport.model;
 /**
  * <p>ClassName:网页授权 可以获取的 用户基本信息 </p> 
  * <p>Description: 该类区别于 基础支持中的 用户基本信息 </p>
- * @author fuji  2015年10月10日
+ * @author andy  2015年10月10日
  */
 public class OAuthUserInfo extends BaseEntity {
 	private static final long serialVersionUID = -8273599345892744721L;
