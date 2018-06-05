@@ -28,6 +28,16 @@ error: failed to push some refs to 'git@code.liuluxiao.com:new-continent/columbu
 5、git push --set-upstream origin XXXXXXX
 此命令是将 本地分支推送至远程， 首次使用，再次提交时即可使用  git push 命令
 
+6、git tag 的使用
+git tag 列出所有的标签
+git tag [tagname] 创建一个标签
+git push origin [tagname] 推送一个tag 到远程仓库去
+git show [tagname] 查看标签所有改动信息
+
+
+
+
+
 
 
 
