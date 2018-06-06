@@ -34,6 +34,10 @@ git tag [tagname] 创建一个标签
 git push origin [tagname] 推送一个tag 到远程仓库去
 git show [tagname] 查看标签所有改动信息
 
+git tag -l jenkins-columbus-parent-master-71
+git tag -a -f -m Jenkins Git plugin tagging with jenkins-columbus-parent-master-71 jenkins-columbus-parent-master-71
+git --version
+git push git@172.17.200.96:new-continent/columbus-parent.git jenkins-columbus-parent-master-71
 
 
 
