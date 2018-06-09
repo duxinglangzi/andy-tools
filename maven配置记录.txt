@@ -1,0 +1,26 @@
+
+在mac 上配置安装maven 
+
+1、先安装 homebrew 工具管理 （非常好用）
+再通过 命令:brew install maven 
+即可 安装完成 maven
+
+2、在on my zsh 里面配置maven
+如果已经安装maven 了。
+可以先使用命令 : mvn -v 查看maven的版本。
+这时候会看到 maven的基本配置。 
+
+直接在 主目录下  编辑 .zshrc 文件(该文件是 on my zsh 的配置文件)
+在 .zshrc 文件内  插件里面直接 加入 mvn 即可, 
+如下： 
+plugins=(
+  git
+  mvn
+) 
+
+
+然后保存，重启终端 或者 iterm2 即可。 
+如果没有生效, 执行命令:source .zshrc  然后再重启即可
+
+
+
