@@ -16,7 +16,7 @@
 2、git blame [filename] -L 开始行号,结束行号
   其中 -L 一定要大写。
 
-3、git cherry-pink [commitID]  是用来将同一个仓库内不同分支提交的内容切换到当前分支上来。
+6、git cherry-pink [commitID]  是用来将同一个仓库内不同分支提交的内容切换到当前分支上来。
 
 4、在使用 git push --delete origin origin/xxxxx-fixbug 命令时，发生以下保存，那么很可能是你因为你从来没有在本地使用过当前分支
 error: unable to delete 'origin/wuqiong-fixbug': remote ref does not exist
@@ -52,7 +52,15 @@ git branch [branchName] 创建新分支
 git branch -f master 22a0ae7m4k2n5m2n2    将master分支 强制指向某一次提交记录。注释:(比如在创建新的分支内修改了好多东西，并且想让当前分支当master 主干分支。既可以采用此命令。)
 
 
+8、 git reset 回滚操作
+git reset fh1h31j3j5nw5mw 回滚到某一次提交， 如果当前commitID和目标commitID 相差的版本比较多，不建议使用此命令
+另外，reset 回滚到目标commitID 会丢失数据
 
+
+
+9、git revert 同样回滚操作
+git revert fh1h31j3j5nw5mw 回滚到某一次提交，该命令指示将本地代码恢复到某一次版本的状态。 并且产生一个新的commitID 来记录，
+原有的提交并不会消失，只是被 目标版本 覆盖而已。
 
 
 
