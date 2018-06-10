@@ -40,6 +40,26 @@ git --version
 git push git@172.17.200.96:new-continent/columbus-parent.git jenkins-columbus-parent-master-71
 
 
+7、git branch 分支操作等等
+git branch 查看当前分支
+git branch -a 查看所有分支，包含远程分支
+git branch -d [branchName] 删除一个本地分支，如果当前本地分支没有进行 合并过 master。 那么会有提示。 
+git branch -D [branchName] 如上，如果本地分支没有merge过。那么可以使用此命令进行 强制删除
+git push --delete origin [branchName] 删除远程仓库的分支，但是进行此操作前，必须切换到当前分支，
+然后才能删除远程分支，下一步在删除本地分支。也就是说删除的远程分支，必须存在于本地。
+
+git branch [branchName] 创建新分支 
+git branch -f master 22a0ae7m4k2n5m2n2    将master分支 强制指向某一次提交记录。注释:(比如在创建新的分支内修改了好多东西，并且想让当前分支当master 主干分支。既可以采用此命令。)
+
+
+
+
+
+
+
+
+
+
 
 
 
