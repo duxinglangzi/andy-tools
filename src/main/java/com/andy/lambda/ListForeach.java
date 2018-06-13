@@ -1,8 +1,6 @@
 package com.andy.lambda;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Spliterators;
+import java.util.*;
 
 /**
  * <p>Description: </p>
@@ -42,8 +40,20 @@ public class ListForeach {
         System.out.println(stringList.size());
 
 
+        Map<String, String> map = new HashMap<>();
+        map.put("wu", "吴");
+        map.put("qiong", "琼");
+        map.put("ha", "哈");
+        map.keySet().forEach(key -> {
+                    System.out.println(map.get(key));
+                }
+        );
 
+        map.values().forEach(val->{
+            System.out.println(val);
+        });
 
+        System.out.println(map.values());
 
 
     }
