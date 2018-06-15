@@ -63,6 +63,15 @@ git revert fh1h31j3j5nw5mw 回滚到某一次提交，该命令指示将本地�
 原有的提交并不会消失，只是被 目标版本 覆盖而已。
 
 
+10、git log 使用
+git log 查看提交记录
+git log --pretty=oneline 按行展示提交记录
+git log --graph 展示提交树
+
+多个操作符可组合使用，比如: git log --graph --oneline 展示提交树 并按行显示
+比如查看两个或者多个标签之间的提交记录: git log --oneline version-master-115...version-master-116
+当然也可以是多个 提交记录之间的内容. 
+
 
 
 
