@@ -48,6 +48,8 @@ public class ListForeach {
                     System.out.println(map.get(key));
                 }
         );
+        
+        map.keySet().forEach(key->System.out.println("真的吗"));
 
         map.values().forEach(val->{
             System.out.println(val);
