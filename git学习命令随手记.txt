@@ -18,7 +18,7 @@
 
 6、git cherry-pink [commitID]  是用来将同一个仓库内不同分支提交的内容切换到当前分支上来。
 
-4、在使用 git push --delete origin origin/xxxxx-fixbug 命令时，发生以下保存，那么很可能是你因为你从来没有在本地使用过当前分支
+9、在使用 git push --delete origin origin/xxxxx-fixbug 命令时，发生以下保存，那么很可能是你因为你从来没有在本地使用过当前分支
 error: unable to delete 'origin/wuqiong-fixbug': remote ref does not exist
 error: failed to push some refs to 'git@code.liuluxiao.com:new-continent/columbus-parent.git'
 
@@ -73,6 +73,7 @@ git log --graph 展示提交树
 当然也可以是多个 提交记录之间的内容. 
 
 
+log --color --graph --pretty=format:'%C(bold white)%h%Creset -%C(bold green)%d%Creset %s %C(bold green)(%cr)%Creset %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 
 
 
