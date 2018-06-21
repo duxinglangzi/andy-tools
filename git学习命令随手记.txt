@@ -57,7 +57,6 @@ git reset fh1h31j3j5nw5mw 回滚到某一次提交， 如果当前commitID和目
 另外，reset 回滚到目标commitID 会丢失数据
 
 
-
 9、git revert 同样回滚操作
 git revert fh1h31j3j5nw5mw 回滚到某一次提交，该命令指示将本地代码恢复到某一次版本的状态。 并且产生一个新的commitID 来记录，
 原有的提交并不会消失，只是被 目标版本 覆盖而已。
