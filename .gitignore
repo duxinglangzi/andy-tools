@@ -7,7 +7,6 @@
 /logs/
 *.log
 
-
 # Intellij
 .idea/
 *.iml
