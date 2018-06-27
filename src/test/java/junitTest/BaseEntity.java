@@ -5,7 +5,6 @@ import java.io.Serializable;
 /**
  * <p>ClassName: 请求钉钉接口 返回参数基础类 </p>
  * <p>Description: </p>
- * <p>Company:雅座在线（北京）科技发展有限公司 </p>
  * <p>@author wuqiong  2018/1/10 14:24 </p>
  */
 public class BaseEntity implements Serializable{
