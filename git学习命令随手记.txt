@@ -60,7 +60,6 @@ git reset fh1h31j3j5nw5mw 回滚到某一次提交， 如果当前commitID和目
 git revert fh1h31j3j5nw5mw 回滚到某一次提交，该命令指示将本地代码恢复到某一次版本的状态。 并且产生一个新的commitID 来记录，
 原有的提交并不会消失，只是被 目标版本 覆盖而已。
 
-
 10、git log 使用
 git log 查看提交记录
 git log --pretty=oneline 按行展示提交记录
