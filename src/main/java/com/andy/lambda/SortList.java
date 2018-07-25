@@ -42,6 +42,9 @@ public class SortList {
 
         list.forEach(s -> System.out.println(s));
 
+        // 还可以用 另一种方式
+        list.sort((a, b) -> a.charAt(1) < b.charAt(1) ? 1 : -1);
+
 
     }
 
