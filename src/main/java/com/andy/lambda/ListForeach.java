@@ -44,10 +44,7 @@ public class ListForeach {
         map.put("wu", "吴");
         map.put("qiong", "琼");
         map.put("ha", "哈");
-        map.keySet().forEach(key -> {
-                    System.out.println(map.get(key));
-                }
-        );
+        map.keySet().forEach(key -> System.out.println(map.get(key)));
         
         map.keySet().forEach(key->System.out.println("真的吗"));
 
