@@ -18,7 +18,6 @@ plugins=(
   mvn
 ) 
 
-
 然后保存，重启终端 或者 iterm2 即可。 
 如果没有生效, 执行命令:source .zshrc  然后再重启即可
 
