@@ -24,6 +24,7 @@ error: failed to push some refs to 'git@code.liuluxiao.com:new-continent/columbu
 解决办法： git checkout xxxxx-fixbug 切换到当前分支上， 然后再 进行 git push --delete origin origin/xxxxx-fixbug
 此时将不会再发生错误 。
 
+
 5、git push --set-upstream origin XXXXXXX
 此命令是将 本地分支推送至远程， 首次使用，再次提交时即可使用  git push 命令
 
