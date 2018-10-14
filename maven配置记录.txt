@@ -22,4 +22,4 @@ plugins=(
 如果没有生效, 执行命令:source .zshrc  然后再重启即可
 
 
-a
+
