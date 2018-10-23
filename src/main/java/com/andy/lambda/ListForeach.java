@@ -55,5 +55,8 @@ public class ListForeach {
         System.out.println(map.values());
 
 
+        String s1 = stringList.stream().filter(s -> s.equals("a")).findFirst().get();
+        System.out.println(s1);
+
     }
 }
