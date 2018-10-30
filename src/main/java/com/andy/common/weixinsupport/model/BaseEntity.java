@@ -8,6 +8,7 @@ public class BaseEntity implements Serializable{
 	private static final long serialVersionUID = -4830335976041382725L;
 	
 	protected String errcode;
+
 	protected String errmsg;
 	
 	public String getErrcode() {
