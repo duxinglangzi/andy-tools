@@ -16,10 +16,9 @@ public class ReentrantLockTest extends TestCase{
 
     /**
      * ReentrantLock 重入锁
-     * 概念: 当一个线程占有当前方法块或代码块时， 由其它因素导致当前线程需再次访问时，无需排队阻塞直接进入。但是state 状态会在原来基础上 增加 1。
-     *       直到当前线程完全释放锁，state 才会变为0， 此时可以 通知下一个阻塞的线程进入处理其业务.
-     *
-     *
+     * 概念: 当一个线程占有当前方法块或代码块时， 由其它因素导致当前线程需再次访问时，无需排队阻塞直接进入。
+     * 但是state 状态会在原来基础上 增加 1。 直到当前线程完全释放锁，state 才会变为0，
+     * 此时可以 通知下一个阻塞的线程进入处理其业务.
      *
      */
     public static final Lock reentrantLock = new ReentrantLock();
