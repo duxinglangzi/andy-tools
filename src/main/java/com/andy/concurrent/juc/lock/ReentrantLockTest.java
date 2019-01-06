@@ -12,7 +12,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * <p>Company:雅座在线（北京）科技发展有限公司 </p>
  * <p>@author wuqiong  2017/12/28 15:06 </p>
  */
-public class ReentrantLockTest extends TestCase{
+public class ReentrantLockTest{
 
     /**
      * ReentrantLock 重入锁
@@ -24,9 +24,20 @@ public class ReentrantLockTest extends TestCase{
     public static final Lock reentrantLock = new ReentrantLock();
 
 
+    public static void main(String[] args) {
+
+        for (int i = 0; i < 3; i++) {
+            ReentrantLockTest test = new ReentrantLockTest();
+            test.testIssue();
+        }
+
+
+
+
+    }
 
     //测试锁
-    public void testIssue(){
+    private void testIssue(){
         reentrantLock.lock();//必须使用在 try-catch 外面
         try {
             System.out.println("测试锁开始了 ："+System.currentTimeMillis());

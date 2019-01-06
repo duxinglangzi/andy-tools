@@ -10,11 +10,13 @@ import java.util.concurrent.Semaphore;
 public class SemaphoreTest {
 
     public static void main(String[] args) throws Exception {
-        Semaphore wc = new Semaphore(3, true); // 3个坑位
+        Semaphore wc = new Semaphore(1, true); // 3个坑位
         for (int i = 1; i <= 6; i++) {
             Thread t = new Thread(new Person("第" + i + "个人", wc));
             t.start();
-            Thread.sleep(new Random().nextInt(300));
+            Thread t2 = new Thread(new Person("-------第" + i + "个人", wc));
+            t2.start();
+            Thread.sleep(new Random().nextInt(800));
         }
     }
 
