@@ -76,6 +76,11 @@ git log --graph 展示提交树
 log --color --graph --pretty=format:'%C(bold white)%h%Creset -%C(bold green)%d%Creset %s %C(bold green)(%cr)%Creset %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 
 
+11、git reflog 命令
+有时候，我们在本地创建了一个分支，但是我们忘记了这个分支 是基于那个分支创建的。 并且也忘记了 这个都提交了什么？ 
+这时候想要查找一下，可以使用：  git reflog --date=local <branchName>  就可以看到这个分支都提交了什么东西。 
+并可以看到这个分支是什么时候创建的 等等. 
+
 
 
 
