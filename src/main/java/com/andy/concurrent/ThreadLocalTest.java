@@ -12,6 +12,10 @@ public class ThreadLocalTest {
      * 原理: ThreadLocal 是采用键、值对象为值的存储结构，这个结构被附带在线程上，也就是说一个线程可以根据一个ThreadLocal查询绑定到这个线程上的一个值。
      *      ThreadLocal键是一个弱引用，当线程被JVM的 gc 回收时，引用消失，随之值也会回收释放。几乎不会出现内存问题.
      *
+     * 原理补充： 只要线程处于活动状态并且ThreadLocal实例可以访问，每个线程就拥有对其线程局部变量副本的隐(弱)式引用。
+     *          在一个线程消失之后，线程本地实例的所有副本都会被垃圾收集（注:除非存在对这些副本的其他引用）.
+     *          因此如果副本被长时间占用，那么可能也会造成内存泄漏问题。
+     *
      * 1、ThreadLocal 可以用来保存和传递 变量、 经典用法:com.github.pagehelper.PageHelper.startPage()
      * 2、可以用来变量副本，如: SimpleDateUtils 保存指定格式的SimpleDateFormat 变量。此时可支持多线程访问。
      *
