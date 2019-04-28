@@ -44,6 +44,15 @@ public class MapLambdaTest {
         });
 
 
+        // 有一种情况非常常见，那就是如果集合转map结构时候，可能会出现重复的key ，那么这时候会发生一个错误 java.lang.IllegalStateException: Duplicate key
+        Map<Integer, LambdaUser> lambdaUserMap = userList.stream().collect(Collectors.toMap(LambdaUser::getAge, e -> e));// 错误的写法。
+
+        // 因此这地方需要做一个排重操作，只留一个
+        Map<Integer, LambdaUser> lambdaUserMap2 = userList.stream().collect(Collectors.toMap(LambdaUser::getAge, e -> e, (a,b) -> a));// 正确的写法。
+        // 这里写 a 表示，只留第一个。 如果写 b 表示只留 第二个
+
+
+
     }
 
 }
