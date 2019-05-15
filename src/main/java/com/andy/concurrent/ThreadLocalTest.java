@@ -19,6 +19,10 @@ public class ThreadLocalTest {
      * 1、ThreadLocal 可以用来保存和传递 变量、 经典用法:com.github.pagehelper.PageHelper.startPage()
      * 2、可以用来变量副本，如: SimpleDateUtils 保存指定格式的SimpleDateFormat 变量。此时可支持多线程访问。
      *
+     *
+     * 注意事项: 如果在多线程、线程池内使用 ThreadLocal 时，必须在当前线程结束时清除当前线程内容。否则会因线程池复用此线程，导致数据
+     * 污染问题，从而产生其他bug 信息
+     *
      */
 
     public static void main(String[] args) throws InterruptedException {
