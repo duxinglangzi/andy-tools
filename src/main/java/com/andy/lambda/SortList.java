@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * <p>Description: 测试排序的lambda写法 </p>
@@ -44,6 +45,9 @@ public class SortList {
 
         // 还可以用 另一种方式
         list.sort((a, b) -> a.charAt(1) < b.charAt(1) ? 1 : -1);
+
+        // 过滤
+        list.stream().filter(t -> "uc".equals(t)).collect(Collectors.toList());
 
 
     }
