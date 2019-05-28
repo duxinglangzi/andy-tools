@@ -1,6 +1,7 @@
 package com.andy.lambda;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * <p>Description: </p>
@@ -12,10 +13,15 @@ public class ListForeach {
         List<String> stringList = new ArrayList<>();
         stringList.add("a");
         stringList.add("b");
+        stringList.add("b");
+        stringList.add("b");
         stringList.add("c");
         stringList.add("d");
         stringList.add("E");
+        stringList.add("E");
         stringList.add("F");
+        stringList.add("G");
+        stringList.add("G");
         stringList.add("G");
 
         /**
@@ -55,8 +61,12 @@ public class ListForeach {
         System.out.println(map.values());
 
 
+        // 过滤并找到第一个
         String s1 = stringList.stream().filter(s -> s.equals("a")).findFirst().get();
         System.out.println(s1);
+
+        // 循环遍历成 map 结构
+        Map<String,List<String>> stringListMap=stringList.stream().collect(Collectors.groupingBy(t -> t));
 
     }
 }
