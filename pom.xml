@@ -17,7 +17,7 @@
         <!-- 这里做一次git commit -amend命令的测试  -->
         <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
         <commons.lang.version>2.6</commons.lang.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <fastjson.version>1.2.47</fastjson.version>
     </properties>
 
