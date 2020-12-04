@@ -30,7 +30,7 @@ public class RSACoder {
      * 密钥长度，DH算法的默认密钥长度是1024
      * 密钥长度必须是64的倍数，在512到65536位之间
      */
-    private static final int KEY_SIZE = 512;
+    private static final int KEY_SIZE = 1024;
     //公钥
     private static final String PUBLIC_KEY = "RSAPublicKey";
 
@@ -180,24 +180,24 @@ public class RSACoder {
         byte[] privateKey = RSACoder.getPrivateKey(keyMap);
         System.out.println("公钥： " + Base64.encodeBase64String(publicKey));
         System.out.println("私钥： " + Base64.encodeBase64String(privateKey));
-        System.out.println(publicKey.equals(publicKey));
-        System.out.println("反解密 ： "+ Base64.decodeBase64(Base64.encodeBase64String(publicKey)).equals(publicKey));
+//        System.out.println(publicKey.equals(publicKey));
+//        System.out.println("反解密 ： "+ Base64.decodeBase64(Base64.encodeBase64String(publicKey)).equals(publicKey));
+//
+//        System.out.println("================密钥对构造完毕,甲方将公钥公布给乙方，开始进行加密数据的传输=============");
+//        String str = "RSA密码交换算法";
+//        System.out.println("/n===========甲方向乙方发送加密数据==============");
+//        System.out.println("原文:" + str);
+//        //甲方进行数据的加密
+//        byte[] code1 = RSACoder.encryptByPrivateKey(str.getBytes(), privateKey);
+//        System.out.println("加密后的数据：" + Base64.encodeBase64String(code1));
+//        System.out.println("===========乙方使用甲方提供的公钥对数据进行解密==============");
+//        //乙方进行数据的解密
+//        byte[] decode1 = RSACoder.decryptByPublicKey(code1, publicKey);
+//        System.out.println("乙方解密后的数据：" + new String(decode1) + " ");
 
-        System.out.println("================密钥对构造完毕,甲方将公钥公布给乙方，开始进行加密数据的传输=============");
-        String str = "RSA密码交换算法";
-        System.out.println("/n===========甲方向乙方发送加密数据==============");
-        System.out.println("原文:" + str);
-        //甲方进行数据的加密
-        byte[] code1 = RSACoder.encryptByPrivateKey(str.getBytes(), privateKey);
-        System.out.println("加密后的数据：" + Base64.encodeBase64String(code1));
-        System.out.println("===========乙方使用甲方提供的公钥对数据进行解密==============");
-        //乙方进行数据的解密
-        byte[] decode1 = RSACoder.decryptByPublicKey(code1, publicKey);
-        System.out.println("乙方解密后的数据：" + new String(decode1) + " ");
+        System.out.println("===========反向进行操作，乙方向甲方发送数据==============\n\n\n");
 
-        System.out.println("===========反向进行操作，乙方向甲方发送数据==============");
-
-        str = "乙方向甲方发送数据RSA算法";
+        String str = "乙方向甲方发送数据RSA算法";
 
         System.out.println("原文:" + str);
 

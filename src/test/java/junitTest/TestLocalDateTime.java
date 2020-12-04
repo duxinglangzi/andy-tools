@@ -38,22 +38,18 @@ public class TestLocalDateTime extends TestCase {
         System.out.println("test github push ");
 
 
+        LocalDate localDate1 = localDate.minusMonths(1L);
 
 
+        System.out.println(localDate1.with(TemporalAdjusters.firstDayOfMonth()));
 
+        System.out.println(LocalDateTimeUtils.localDateToDate(localDate1.with(TemporalAdjusters.firstDayOfMonth())));
+        System.out.println(
+                LocalDateTimeUtils.localDateTimeToDate(
+                        LocalDateTime.of(localDate1.with(TemporalAdjusters.lastDayOfMonth()), LocalTime.of(23, 59, 59))));
 
-            LocalDate localDate1 = localDate.minusMonths(1L);
-
-
-            System.out.println(localDate1.with(TemporalAdjusters.firstDayOfMonth()));
-
-            System.out.println(LocalDateTimeUtils.localDateToDate(localDate1.with(TemporalAdjusters.firstDayOfMonth())));
-            System.out.println(
-                    LocalDateTimeUtils.localDateTimeToDate(
-                            LocalDateTime.of(localDate1.with(TemporalAdjusters.lastDayOfMonth()),LocalTime.of(23,59,59))));
-
-            Date date = LocalDateTimeUtils.localDateToDate(LocalDateTime.now().toLocalDate().minusMonths(1L));
-            System.out.println(LocalDateTimeUtils.dateToLocalDateTime(date).toString());
+        Date date = LocalDateTimeUtils.localDateToDate(LocalDateTime.now().toLocalDate().minusMonths(1L));
+        System.out.println(LocalDateTimeUtils.dateToLocalDateTime(date).toString());
 
 
 

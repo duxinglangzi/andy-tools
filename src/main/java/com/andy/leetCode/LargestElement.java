@@ -1,7 +1,10 @@
 package com.andy.leetCode;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.stream.Collectors;
 
 /**
  * <p>Description:给定一个数组，算出目标位数 的数值  </p>

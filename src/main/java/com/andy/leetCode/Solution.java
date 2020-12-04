@@ -76,11 +76,11 @@ public class Solution {
      * @author wuqiong 2018年3月22日 下午6:09:35
      */
     public static int[] twoSum(double[] nums, double target) {
-        int[] result=new int[2];
-        for(int i=0;i<nums.length-1;i++){
-            for(int j=i+1;j<nums.length;j++){
-                if(nums[i]+nums[j]==target){
-                    return new int[]{i,j};
+        int[] result = new int[2];
+        for (int i = 0; i < nums.length - 1; i++) {
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[i] + nums[j] == target) {
+                    return new int[]{i, j};
                 }
             }
         }
@@ -96,10 +96,10 @@ public class Solution {
      * @author andy 2018年3月22日 下午3:43:51
      */
     public static int[] threeSum(double[] nums,double target){
-        int m =0;
+        int m = 0;
         int[] result = null;
-        while (result == null && nums.length > m){
-            if(nums[m] < target){
+        while (result == null && nums.length > m) {
+            if (nums[m] < target) {
                 double tar = target - nums[m];
                 Map<Double, Integer> map = new HashMap<>();
                 for (int j = 0; j < nums.length; j++) {
@@ -107,7 +107,7 @@ public class Solution {
                     if (index == null) {
                         map.put(nums[j], j);
                     } else {
-                        return new int[]{m,j,index};
+                        return new int[]{m, j, index};
                     }
                 }
             }
