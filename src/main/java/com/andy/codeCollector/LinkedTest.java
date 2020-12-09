@@ -21,7 +21,7 @@ public class LinkedTest {
             h = h.getNext();
         }
 
-        Node re = reverse(n1);
+        Node re = re2(n1);
         System.out.println("反转后---");
         while (null != re) {
             System.out.print(re.getIndex() + " ");
@@ -47,6 +47,17 @@ public class LinkedTest {
         head.getNext().setNext(head);
         head.setNext(null);// 前一结点的指针域令为null;
         return reHead;// 反转后新链表的头结点
+    }
+
+    public static Node reverse2(Node node) {
+        Node pre = null;
+        while (node != null) {
+            Node temp = node.next;
+            node.next = pre;
+            pre = node;
+            node = temp;
+        }
+        return pre;
     }
 
     /**
