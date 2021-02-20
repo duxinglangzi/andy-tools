@@ -12,7 +12,7 @@ import java.util.concurrent.atomic.AtomicLong;
  * <p>Description: 在此准备一个  </p>
  * <p>@author wuqiong  2017/12/25 16:14 </p>
  */
-public class ForkJoinTest extends TestCase{
+public class ForkJoinTest extends TestCase {
 
     /**
      * 我们要使用ForkJoin框架，必须首先创建一个ForkJoin任务。它提供在任务中执行fork()和join的操作机制，通常我们不直接继承ForkjoinTask类，只需要直接继承其子类。
@@ -23,17 +23,17 @@ public class ForkJoinTest extends TestCase{
      * 1、核心思想就是，将一个任务切分成两个或者多个子任务进行单独计算，最后进行合并
      */
 
-    public void test_fork_join(){
+    public void test_fork_join() {
 
         ForkJoinPool forkJoinPool = new ForkJoinPool();
-        NumberSum numberSum = new NumberSum(0L,10000L);
+        NumberSum numberSum = new NumberSum(0L, 10000L);
 //        forkJoinPool.execute(numberSum);//如果不需要返回值 直接使用即可
         try {
-            System.out.println("开始前:"+System.currentTimeMillis());
-            Future<Long> longFuture=forkJoinPool.submit(numberSum);
-            System.out.println("总数sum值为 ： "+longFuture.get());
-            System.out.println("结束后:"+System.currentTimeMillis());
-            Assert.assertEquals(new Long(50005000L),longFuture.get());
+            System.out.println("开始前:" + System.currentTimeMillis());
+            Future<Long> longFuture = forkJoinPool.submit(numberSum);
+            System.out.println("总数sum值为 ： " + longFuture.get());
+            System.out.println("结束后:" + System.currentTimeMillis());
+            Assert.assertEquals(new Long(50005000L), longFuture.get());
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
@@ -60,6 +60,7 @@ public class ForkJoinTest extends TestCase{
         private static final Long threshold = 100L;//可以直接求和的临界值。 当两数值相差不足此值时，直接求和
         private Long min;//计算的起始最小值
         private Long max;//计算的起始最大值
+
         NumberSum(Long min, Long max) {
             this.max = max;
             this.min = min;
@@ -67,6 +68,7 @@ public class ForkJoinTest extends TestCase{
 
         /**
          * The main computation performed by this task.
+         *
          * @return the result of the computation
          */
         @Override
@@ -94,15 +96,15 @@ public class ForkJoinTest extends TestCase{
     /**
      * 测试 fork-join 无返回值任务
      */
-    public void test_RecursiveAction_task(){
+    public void test_RecursiveAction_task() {
         try {
             ForkJoinPool forkJoinPool = new ForkJoinPool();
 
-            Job job=new Job(1L,1000L);
-            System.out.println("开始前:"+System.currentTimeMillis());
+            Job job = new Job(1L, 1000L);
+            System.out.println("开始前:" + System.currentTimeMillis());
             Future future = forkJoinPool.submit(job);
             future.get();
-            System.out.println("结束后:"+System.currentTimeMillis());
+            System.out.println("结束后:" + System.currentTimeMillis());
             /**
              * 开始前:1514271925106
              * 结束后:1514271926617
@@ -120,11 +122,12 @@ public class ForkJoinTest extends TestCase{
     /**
      * 无返回值的 任务
      */
-    public static class Job extends RecursiveAction{
+    public static class Job extends RecursiveAction {
 
         private static final Long threshold = 10L;//可以直接求和的临界值。 当两数值相差不足此值时，直接求和
         private Long min;//计算的起始最小值
         private Long max;//计算的起始最大值
+
         Job(Long min, Long max) {
             this.max = max;
             this.min = min;
@@ -140,15 +143,15 @@ public class ForkJoinTest extends TestCase{
             //1、适用于各种定时任务，负责执行即可，无需在意执行结果
             //2、适用于数据批量整理等等，整完即可。
 
-            if((max-min)<=threshold){
-                for (long i = min;i<=max;i++){
+            if ((max - min) <= threshold) {
+                for (long i = min; i <= max; i++) {
                     try {
                         TimeUnit.MILLISECONDS.sleep(5L);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
                 }
-            }else{
+            } else {
                 long mid = (max + min) >>> 1; //最小值和最大值相加除以2
                 Job j1 = new Job(min, mid);
                 j1.fork();//执行子任务
@@ -159,10 +162,6 @@ public class ForkJoinTest extends TestCase{
             }
         }
     }
-
-
-
-
 
 
 }

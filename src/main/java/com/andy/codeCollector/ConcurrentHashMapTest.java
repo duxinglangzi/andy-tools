@@ -10,12 +10,14 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * <p>Description: 描述该类实现了什么功能 </p>
+ *
  * @author wuqiong  2017年8月18日
  */
 public class ConcurrentHashMapTest {
 
     /**
      * 方法描述:
+     *
      * @param args
      * @return void
      * @author wuqiong 2017年8月18日 下午2:49:12
@@ -77,14 +79,14 @@ public class ConcurrentHashMapTest {
 
     }
 
-	/*
-	 * final Entry<K,V> nextEntry() { if (modCount != expectedModCount) throw
-	 * new ConcurrentModificationException(); Entry<K,V> e = next; if (e ==
-	 * null) throw new NoSuchElementException();
-	 *
-	 * if ((next = e.next) == null) { Entry[] t = table; while (index < t.length
-	 * && (next = t[index++]) == null) ; } current = e; return e; }
-	 */
+    /*
+     * final Entry<K,V> nextEntry() { if (modCount != expectedModCount) throw
+     * new ConcurrentModificationException(); Entry<K,V> e = next; if (e ==
+     * null) throw new NoSuchElementException();
+     *
+     * if ((next = e.next) == null) { Entry[] t = table; while (index < t.length
+     * && (next = t[index++]) == null) ; } current = e; return e; }
+     */
 
 }
 

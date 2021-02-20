@@ -8,12 +8,11 @@ package com.andy.concurrent.thread;
 public class ThreadYieldTest {
 
 
+    public void test_yield() {
 
-    public void test_yield(){
-
-        for (int i = 0 ;i<3;i++){
+        for (int i = 0; i < 3; i++) {
             Thread.yield();
-            System.out.println(Thread.currentThread().getName()+" 第 "+i+" 号" + Thread.currentThread().getPriority());
+            System.out.println(Thread.currentThread().getName() + " 第 " + i + " 号" + Thread.currentThread().getPriority());
         }
 
 
@@ -25,15 +24,16 @@ public class ThreadYieldTest {
      * 最小优先级是 1
      * 最高优先级是 10
      * 调用 Thread.yield(); 表示 等待比其本身高优先级的线程先 通过后，本身才会进行
+     *
      * @param args
      */
     public static void main(String[] args) {
         ThreadYieldTest threadYieldTest = new ThreadYieldTest();
         Thread thread2 = new Thread(() -> threadYieldTest.test_yield());
         thread2.setPriority(1);
-        System.out.println(thread2.getPriority()+"第一个");
+        System.out.println(thread2.getPriority() + "第一个");
 
-        Thread thread =new Thread(() -> threadYieldTest.test_yield());
+        Thread thread = new Thread(() -> threadYieldTest.test_yield());
         thread.setPriority(10);
         System.out.println(thread.getPriority());
 

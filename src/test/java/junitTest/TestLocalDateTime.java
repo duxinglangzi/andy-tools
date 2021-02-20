@@ -17,7 +17,7 @@ import java.util.Date;
  */
 public class TestLocalDateTime extends TestCase {
 
-    public void test_time(){
+    public void test_time() {
         LocalDateTime localDateTime = LocalDateTime.now();
 
         System.out.println(localDateTime.toString());
@@ -50,11 +50,6 @@ public class TestLocalDateTime extends TestCase {
 
         Date date = LocalDateTimeUtils.localDateToDate(LocalDateTime.now().toLocalDate().minusMonths(1L));
         System.out.println(LocalDateTimeUtils.dateToLocalDateTime(date).toString());
-
-
-
-
-
 
 
     }

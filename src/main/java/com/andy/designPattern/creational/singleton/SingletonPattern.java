@@ -7,7 +7,7 @@ import org.junit.Assert;
  * <p>Description: 单例模式，即一个类只允许存在一个实例。 </p>
  * <p>@author wuqiong  2017/11/30 14:41 </p>
  */
-public class SingletonPattern{
+public class SingletonPattern {
 
     /**
      * 懒汉式，线程不安全，在使用时初始化示例（懒加载）

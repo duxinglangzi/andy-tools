@@ -21,7 +21,7 @@ public class TimeTest {
         Instant instant = Instant.ofEpochMilli(1562783161000L);
         ZoneId zone = Clock.systemUTC().getZone();
 
-        System.out.println(LocalDateTime.ofInstant(instant,zone));
+        System.out.println(LocalDateTime.ofInstant(instant, zone));
         System.out.println(LocalDateTime.now(Clock.systemUTC()));
 
 

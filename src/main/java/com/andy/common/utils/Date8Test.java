@@ -29,12 +29,12 @@ public class Date8Test {
 
         System.out.println(LocalDate.parse("2017-06-23"));
 
-        System.out.println(LocalDateTime.of(LocalDate.now(),LocalTime.now()));
+        System.out.println(LocalDateTime.of(LocalDate.now(), LocalTime.now()));
 
         System.out.println(DateFormat.getInstance().format(new Date()));
 
         JSONObject json = new JSONObject();
-        json.put("aa",LocalDateTime.now());
+        json.put("aa", LocalDateTime.now());
 //        json.put("asdfasdf",LocalDateTime.parse("2017-02-13 15:36:42"));
 
         LocalDateTime localDateTime = LocalDateTime.parse("2017-02-13 15:36:42", DateTimeFormatter.ISO_LOCAL_DATE);
@@ -45,7 +45,7 @@ public class Date8Test {
         System.out.println(JSON.toJSONStringWithDateFormat(LocalDateTime.now(), "yyyy-MM-dd HH:mm:ss"));
         System.out.println(JSON.toJSONStringWithDateFormat(LocalDate.now(), "yyyy-MM-dd HH:mm:ss"));
 
-        String string ="{\"id\":\"c2643096-7346-4475-bcf6-d1a36f6185df\",\"tenantId\":\"905cf3b7-6696-45a8-9820-83175106340e\",\"dishCode\":\"57008\",\"dishName\":\"332223\"," +
+        String string = "{\"id\":\"c2643096-7346-4475-bcf6-d1a36f6185df\",\"tenantId\":\"905cf3b7-6696-45a8-9820-83175106340e\",\"dishCode\":\"57008\",\"dishName\":\"332223\"," +
                 "\"phoneticCode\":\"332223\",\"fivepenCode\":\"33222\",\"dishProperty\":371,\"dishImg\":\"NO\",\"unitName\":\"支\",\"sortId\":\"0f5a3813-73a2-42e8-907b-7b3b99342d80\"," +
                 "\"taxRate\":0.0,\"sellPrice\":1.0,\"membPrice\":1.0,\"theoMargin\":0.0,\"isCommission\":0,\"commMode\":0,\"commNum\":0.0,\"isDiscount\":1,\"isCurPrice\":0,\"isSingle\":1,\"isPriFood\":0," +
                 "\"isWeigh\":0,\"isServChange\":0,\"isParRank\":1,\"isTurnover\":1,\"dishHeat\":\"100\",\"dishIngredients\":\"\",\"dishFlavor\":\"\",\"dishCuisine\":\"\",\"dishSort\":100,\"status\":1," +
@@ -55,19 +55,17 @@ public class Date8Test {
 
         System.out.println(string);
 
-        ParserConfig config=ParserConfig.getGlobalInstance();
+        ParserConfig config = ParserConfig.getGlobalInstance();
         config.setAsmEnable(false);
         config.putDeserializer(LocalDateTime.class, LocalDateTimeDeserializer.instance);
 
-        String bdTwo =JSON.parseObject(string, String.class, config, new Feature[0]);
+        String bdTwo = JSON.parseObject(string, String.class, config, new Feature[0]);
 
 
 //        BasDish bdTwo =TypeUtils.cast(string,BasDish.class, config);
 
 //        BasDish bdTwo = JSONObject.parseObject(string,BasDish.class);
         System.out.println(JSONObject.toJSONString(bdTwo));
-
-
 
 
         System.out.println(JSON.toJSONString(json, SerializerFeature.WriteDateUseDateFormat));

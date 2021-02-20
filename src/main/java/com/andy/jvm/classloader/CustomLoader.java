@@ -14,8 +14,8 @@ public class CustomLoader extends ClassLoader {
 
     private String clazzDir;
 
-    public CustomLoader(String clazzDir){
-        this.clazzDir=clazzDir;
+    public CustomLoader(String clazzDir) {
+        this.clazzDir = clazzDir;
     }
 
     //自定义 类查找
@@ -32,7 +32,7 @@ public class CustomLoader extends ClassLoader {
                     byte[] buffer = new byte[1024];
                     int len = 0;
                     while ((len = in.read(buffer)) != -1) {
-                        out.write(buffer,0,len);
+                        out.write(buffer, 0, len);
                     }
                     byte[] data = out.toByteArray();
                     return defineClass(name, data, 0, data.length);
@@ -45,9 +45,10 @@ public class CustomLoader extends ClassLoader {
 
     /**
      * 方法描述: 尝试去加载 一个类，并执行内容
+     *
      * @author wuqiong  2018/1/8 15:37
      */
-    public static void main(String[] args) throws ReflectiveOperationException{
+    public static void main(String[] args) throws ReflectiveOperationException {
         //1. 将LoaderTestClass.java 编译为LoaderTestClass.class 后复制到 D:\\ 下，当然也可以选择其他目录作为类加载器的classpath。
         //2. 加载
         ClassLoader classLoader = new CustomLoader("D:\\");

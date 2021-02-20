@@ -44,7 +44,7 @@ public class DingtalkToken extends TestCase {
     }
 
     //2、获取部门列表
-    public void test_get_scopes(){
+    public void test_get_scopes() {
         HttpUriRequest httpUriRequest = RequestBuilder.get()
                 .setUri("https://oapi.dingtalk.com/department/list")
                 .addParameter("access_token", accessToken)
@@ -68,7 +68,7 @@ public class DingtalkToken extends TestCase {
     }
 
     //3、获取部门员工列表 支持分页获取，
-    public void test_get_scopes_userlist(){
+    public void test_get_scopes_userlist() {
         HttpUriRequest httpUriRequest = RequestBuilder.get()
                 .setUri("https://oapi.dingtalk.com/user/simplelist")
                 .addParameter("access_token", accessToken)

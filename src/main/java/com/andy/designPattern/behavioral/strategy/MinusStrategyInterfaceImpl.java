@@ -16,6 +16,6 @@ public class MinusStrategyInterfaceImpl implements StrategyInterface {
      */
     @Override
     public int Calculation(int a, int b) {
-        return a-b;
+        return a - b;
     }
 }

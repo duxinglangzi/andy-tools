@@ -16,27 +16,40 @@ import java.io.IOException;
 
 public final class HttpClientFactory {
 
-    /** 连接池最大连接数 **/
+    /**
+     * 连接池最大连接数
+     **/
     private static final Integer MAX_TOTAL = 300;
-    /** 单个路由默认最大连接数  httpClient 官方强烈推荐最大数不能超过20  **/
+    /**
+     * 单个路由默认最大连接数  httpClient 官方强烈推荐最大数不能超过20
+     **/
     private static final Integer MAX_PER_ROUTE = 20;
-    /** 请求超时时间ms **/
-    private static final Integer REQ_TIMEOUT =  5 * 1000;
-    /** 连接超时时间ms **/
+    /**
+     * 请求超时时间ms
+     **/
+    private static final Integer REQ_TIMEOUT = 5 * 1000;
+    /**
+     * 连接超时时间ms
+     **/
     private static final Integer CONN_TIMEOUT = 5 * 1000;
-    /** 读取超时时间ms **/
+    /**
+     * 读取超时时间ms
+     **/
     private static final Integer SOCK_TIMEOUT = 10 * 1000;
-    /** HTTP链接管理器线程 **/
+    /**
+     * HTTP链接管理器线程
+     **/
     private static HttpClientConnectionMonitorThread thread;
 
     public static HttpClientConnectionMonitorThread getThread() {
         return thread;
     }
+
     public static void setThread(HttpClientConnectionMonitorThread thread) {
         HttpClientFactory.thread = thread;
     }
 
-    public static HttpClient createSimpleHttpClient(){
+    public static HttpClient createSimpleHttpClient() {
         SSLConnectionSocketFactory sf = SSLConnectionSocketFactory.getSocketFactory();
         return HttpClientBuilder.create()
                 .setSSLSocketFactory(sf)
@@ -54,7 +67,7 @@ public final class HttpClientFactory {
         HttpClientFactory.thread = new HttpClientConnectionMonitorThread(poolingHttpClientConnectionManager); //管理 http连接池
 
 
-        ServiceUnavailableRetryStrategy serviceUnavailableRetryStrategy = new ServiceUnavailableRetryStrategy(){
+        ServiceUnavailableRetryStrategy serviceUnavailableRetryStrategy = new ServiceUnavailableRetryStrategy() {
 
             /**
              * Determines if a method should be retried given the response from the target server.
@@ -68,7 +81,7 @@ public final class HttpClientFactory {
              */
             @Override
             public boolean retryRequest(HttpResponse response, int executionCount, HttpContext context) {
-                if (executionCount < 3){
+                if (executionCount < 3) {
                     return false;//重试3次
                 }
                 return false;
@@ -98,7 +111,7 @@ public final class HttpClientFactory {
              */
             @Override
             public boolean retryRequest(IOException exception, int executionCount, HttpContext context) {
-                if (executionCount < 3){
+                if (executionCount < 3) {
                     return false;//重试3次
                 }
                 return false;

@@ -2,14 +2,15 @@ package com.andy.common.weixinsupport.model;
 
 
 /**
- * <p>ClassName:网页授权 可以获取的 用户基本信息 </p> 
+ * <p>ClassName:网页授权 可以获取的 用户基本信息 </p>
  * <p>Description: 该类区别于 基础支持中的 用户基本信息 </p>
+ *
  * @author andy  2015年10月10日
  */
 public class OAuthUserInfo extends BaseEntity {
-	private static final long serialVersionUID = -8273599345892744721L;
-	
-	private String openid;                //用户的唯一标识
+    private static final long serialVersionUID = -8273599345892744721L;
+
+    private String openid;                //用户的唯一标识
     private String nickname;              //用户昵称
     private Integer sex;                  //用户的性别，值为1时是男性，值为2时是女性，值为0时是未知
     private String province;              //用户个人资料填写的省份
@@ -90,5 +91,5 @@ public class OAuthUserInfo extends BaseEntity {
     public void setUnionid(String unionid) {
         this.unionid = unionid;
     }
-    
+
 }

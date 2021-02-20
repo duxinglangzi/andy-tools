@@ -10,23 +10,23 @@ import junitTest.BaseEntity;
 public class Test1 {
 
     /**
-     * @Description: 测试方法注释
      * @param args
      * @return void
+     * @Description: 测试方法注释
      * @Author wuqiong 2018/4/8 12:47
      */
     public static void main(String[] args) {
-        returnStringArgs("asd",2123,new BaseEntity());
+        returnStringArgs("asd", 2123, new BaseEntity());
     }
 
 
     /**
-     * @description： 不可能的可能
      * @param [str, inte, baseEntity]
      * @return java.lang.String
+     * @description： 不可能的可能
      * @author wuqiong 2018-04-08 13:08
      */
-    public static String returnStringArgs(String str, Integer inte, BaseEntity baseEntity){
+    public static String returnStringArgs(String str, Integer inte, BaseEntity baseEntity) {
         System.out.println("fule you ");
 
         return "String args";

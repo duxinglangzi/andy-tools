@@ -5,9 +5,9 @@ package com.andy.common.weixinsupport.model;
  * 通过code换取access_token
  */
 public class OAuthAccessToken extends BaseEntity {
-	private static final long serialVersionUID = -5770010507891079540L;
-	
-	private String access_token;               //接口调用凭证
+    private static final long serialVersionUID = -5770010507891079540L;
+
+    private String access_token;               //接口调用凭证
     private int expires_in;                    //access_token接口调用凭证超时时间，单位（秒）
     private String refresh_token;              //用户刷新access_token
     private String openid;                     //授权用户唯一标识

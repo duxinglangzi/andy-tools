@@ -24,16 +24,16 @@ public class StopWatchTest {
         getTime();
     }
 
-    public static void setTime(){
+    public static void setTime() {
         StopWatch stopWatch = STOP_WATCH_THREAD_LOCAL.get();
-        if(stopWatch==null){
+        if (stopWatch == null) {
             stopWatch = new StopWatch();
             STOP_WATCH_THREAD_LOCAL.set(stopWatch);
             stopWatch.start();
         }
     }
 
-    public static void getTime(){
+    public static void getTime() {
         StopWatch stopWatch = STOP_WATCH_THREAD_LOCAL.get();
         stopWatch.stop();
         System.out.println(stopWatch.getTime());

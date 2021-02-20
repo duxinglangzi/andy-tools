@@ -11,7 +11,6 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 定时器、定时任务
- *
  */
 public class ScheduledExecutorServiceTest {
 
@@ -31,10 +30,9 @@ public class ScheduledExecutorServiceTest {
                 }
                 System.out.println("1--轮循任务测试: " + SimpleDateUtils.to_DATE_TIME_FORMAT(new Date()));
             }
-        },1L,10L,TimeUnit.SECONDS);
+        }, 1L, 10L, TimeUnit.SECONDS);
 
     }
-
 
 
     public static void main(String[] args) {
@@ -42,9 +40,9 @@ public class ScheduledExecutorServiceTest {
         scheduler.schedule(new Runnable() {
             @Override
             public void run() {
-                System.out.println("当前毫秒数: "+System.currentTimeMillis());
+                System.out.println("当前毫秒数: " + System.currentTimeMillis());
             }
-        },10, TimeUnit.MILLISECONDS);
+        }, 10, TimeUnit.MILLISECONDS);
 
 
 //        scheduler.scheduleAtFixedRate(new Runnable() {
@@ -71,7 +69,7 @@ public class ScheduledExecutorServiceTest {
                 System.out.println("2--轮循任务测试: " + SimpleDateUtils.to_DATE_TIME_FORMAT(new Date()));
                 scheduler.shutdown();
             }
-        },1L,10L,TimeUnit.SECONDS);
+        }, 1L, 10L, TimeUnit.SECONDS);
 
 
         System.out.println(scheduler.isShutdown());

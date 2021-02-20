@@ -18,7 +18,7 @@ public class ExchangerTestCase {
             @Override
             public void run() {
                 try {
-                    String str=exchanger.exchange("沃日勒狗了");
+                    String str = exchanger.exchange("沃日勒狗了");
                     System.out.println("第一个线程打印 :" + str);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -31,7 +31,7 @@ public class ExchangerTestCase {
             @Override
             public void run() {
                 try {
-                    String fyck=exchanger.exchange("真是服了气");
+                    String fyck = exchanger.exchange("真是服了气");
                     System.out.println("第二个线程打印 :" + fyck);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -44,7 +44,7 @@ public class ExchangerTestCase {
             @Override
             public void run() {
                 try {
-                    String fyck=exchanger.exchange("下雪了  3");
+                    String fyck = exchanger.exchange("下雪了  3");
                     System.out.println("第三个线程打印 :" + fyck);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -57,7 +57,7 @@ public class ExchangerTestCase {
             @Override
             public void run() {
                 try {
-                    String fyck=exchanger.exchange("我的天啊  4");
+                    String fyck = exchanger.exchange("我的天啊  4");
                     System.out.println("第四个线程打印 :" + fyck);
                 } catch (InterruptedException e) {
                     e.printStackTrace();

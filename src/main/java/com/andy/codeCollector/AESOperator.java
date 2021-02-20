@@ -30,12 +30,12 @@ public class AESOperator {
         return instance;
     }
 
-    public static String Encrypt(String encData ,String secretKey,String vector) throws Exception {
+    public static String Encrypt(String encData, String secretKey, String vector) throws Exception {
 
-        if(secretKey == null) {
+        if (secretKey == null) {
             return null;
         }
-        if(secretKey.length() != 16) {
+        if (secretKey.length() != 16) {
             return null;
         }
         Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
@@ -76,7 +76,7 @@ public class AESOperator {
         }
     }
 
-    public String decrypt(String sSrc,String key,String ivs) throws Exception {
+    public String decrypt(String sSrc, String key, String ivs) throws Exception {
         try {
             byte[] raw = key.getBytes("ASCII");
             SecretKeySpec skeySpec = new SecretKeySpec(raw, "AES");

@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * <p>Description: 使用管理器，管理HTTP连接池 无效链接定期清理功能</p>
+ *
  * @author wuqiong 2017年8月28日
  */
 public class HttpClientConnectionMonitorThread extends Thread {
@@ -39,6 +40,7 @@ public class HttpClientConnectionMonitorThread extends Thread {
 
     /**
      * 方法描述: 停止 管理器 清理无效链接  (该方法当前暂时关闭)
+     *
      * @author wuqiong 2017年8月28日 下午1:45:18
      */
     @Deprecated

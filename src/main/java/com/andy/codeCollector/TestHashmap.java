@@ -31,19 +31,18 @@ public class TestHashmap {
 
 
         Set<String> stringSet = new HashSet<>(hashmap.keySet());
-        for(String s : stringSet){
+        for (String s : stringSet) {
             System.out.println(s);
             hashmap.remove("s");
         }
         System.out.println("-----------");
         Set<String> newString = new HashSet<>(hashmap.keySet());
-        for(String s : newString){
+        for (String s : newString) {
             System.out.println(s);
         }
 
 
     }
-
 
 
 }

@@ -6,8 +6,9 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ElementType.FIELD,ElementType.METHOD})
+@Target({ElementType.FIELD, ElementType.METHOD})
 public @interface Size {
-    long min() default(0);
-    long max() default(0);
+    long min() default (0);
+
+    long max() default (0);
 }

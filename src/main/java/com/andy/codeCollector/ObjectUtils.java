@@ -24,7 +24,7 @@ public class ObjectUtils {
             return ((Collection<?>) obj).isEmpty();
         }
         if (obj instanceof Map) {
-            return ((Map<?,?>) obj).isEmpty();
+            return ((Map<?, ?>) obj).isEmpty();
         }
 
         return false;

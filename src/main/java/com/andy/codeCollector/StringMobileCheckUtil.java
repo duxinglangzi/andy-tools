@@ -42,33 +42,39 @@ public class StringMobileCheckUtil {
         System.out.println(aedMobilePattern.matcher("00971505407707").matches());
     }
 
-    public static boolean isMobile(String mobile){
+    public static boolean isMobile(String mobile) {
         return mobilePattern.matcher(mobile).matches();
     }
 
-    public static boolean isNotMobile(String mobile){
+    public static boolean isNotMobile(String mobile) {
         return !isMobile(mobile);
     }
 
-    public static boolean isSarMobile(String mobile){
+    public static boolean isSarMobile(String mobile) {
         return sarMobilePattern.matcher(mobile).matches();
     }
-    public static boolean isAedMobile(String mobile){
+
+    public static boolean isAedMobile(String mobile) {
         return aedMobilePattern.matcher(mobile).matches();
     }
-    public static boolean isUsaMobile(String mobile){
+
+    public static boolean isUsaMobile(String mobile) {
         return usaMobilePattern.matcher(mobile).matches();
     }
-    public static boolean isKwMobile(String mobile){
+
+    public static boolean isKwMobile(String mobile) {
         return kwMobilePattern.matcher(mobile).matches();
     }
-    public static boolean isOmMobile(String mobile){
+
+    public static boolean isOmMobile(String mobile) {
         return omMobilePattern.matcher(mobile).matches();
     }
-    public static boolean isBhMobile(String mobile){
+
+    public static boolean isBhMobile(String mobile) {
         return bhMobilePattern.matcher(mobile).matches();
     }
-    public static boolean isQaMobile(String mobile){
+
+    public static boolean isQaMobile(String mobile) {
         return qaMobilePattern.matcher(mobile).matches();
     }
 

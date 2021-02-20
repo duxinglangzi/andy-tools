@@ -10,7 +10,7 @@ public class Consumer extends Thread {
     // 构造函数，设置仓库
     public Consumer(Storage storage, int num) {
         this.storage = storage;
-        this.num=num;
+        this.num = num;
     }
 
     // 线程run函数

@@ -5,32 +5,32 @@ package com.andy.concurrent.thread;
  * <p>Description: </p>
  * <p>@author wuqiong  2018/1/2 16:08 </p>
  */
-public class ThreadJoinTest{
+public class ThreadJoinTest {
 
     public static void main(String[] args) {
 
         try {
-            Thread t1= new Thread(new Runnable() {
+            Thread t1 = new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    System.out.println(Thread.currentThread().getName()+"--t1 测试");
+                    System.out.println(Thread.currentThread().getName() + "--t1 测试");
                 }
             });
             t1.start();
             t1.join();
 
-            Thread t2= new Thread(new Runnable() {
+            Thread t2 = new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    System.out.println(Thread.currentThread().getName()+"--t2 测试");
+                    System.out.println(Thread.currentThread().getName() + "--t2 测试");
                 }
             });
             t2.start();
             t2.join();
-            Thread t3= new Thread(new Runnable() {
+            Thread t3 = new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    System.out.println(Thread.currentThread().getName()+"--t3 测试");
+                    System.out.println(Thread.currentThread().getName() + "--t3 测试");
                 }
             });
             t3.start();
@@ -62,8 +62,6 @@ public class ThreadJoinTest{
          *  该知识点 涉及 面试题 ： 如何让三个线程 有序的执行完毕
          */
     }
-
-
 
 
 }

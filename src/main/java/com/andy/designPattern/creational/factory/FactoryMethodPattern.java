@@ -11,6 +11,7 @@ public class FactoryMethodPattern {
     static abstract class Car {
         abstract void run();
     }
+
     //奔驰汽车
     static class Benz extends Car {
 
@@ -19,6 +20,7 @@ public class FactoryMethodPattern {
             System.out.println("奔驰车在跑");
         }
     }
+
     //宝马汽车
     static class BMW extends Car {
 
@@ -27,10 +29,12 @@ public class FactoryMethodPattern {
             System.out.println("宝马车在跑");
         }
     }
+
     //抽象的汽车工厂
     static abstract class CarFactory {
         public abstract Car getCar();
     }
+
     //奔驰汽车工厂
     static class BenzFactory extends CarFactory {
         @Override
@@ -38,6 +42,7 @@ public class FactoryMethodPattern {
             return new Benz();
         }
     }
+
     //宝马汽车工厂
     static class BMWFactory extends CarFactory {
         @Override
@@ -45,6 +50,7 @@ public class FactoryMethodPattern {
             return new BMW();
         }
     }
+
     public static void main(String[] args) {
         CarFactory factory = new BenzFactory();
         //CarFactory factory = new BMWFactory();

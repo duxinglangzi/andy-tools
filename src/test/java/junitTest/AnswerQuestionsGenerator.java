@@ -34,14 +34,14 @@ public class AnswerQuestionsGenerator {
 
     }
 
-    public static String convertQuestions2DbStr(QuestionModel[] questions){
+    public static String convertQuestions2DbStr(QuestionModel[] questions) {
         StringBuilder sb = new StringBuilder(1000);
 
         /**
          * 格式 n1:n2:ex:r:t:ms;...;n1:n2:ex:r:t:ms;
          */
 
-        for(QuestionModel m : questions){
+        for (QuestionModel m : questions) {
             sb.append(m.getN1()).append(":")
                     .append(m.getN2()).append(":")
                     .append(m.getEx()).append(":")
@@ -92,7 +92,7 @@ public class AnswerQuestionsGenerator {
             ex = "-";
         }
 
-        if("-".equals(ex) && n1 < n2){
+        if ("-".equals(ex) && n1 < n2) {
             int t = n1;
             n1 = n2;
             n2 = t;
@@ -152,18 +152,30 @@ public class AnswerQuestionsGenerator {
 
     public static class QuestionModel {
 
-        /** 左数1 */
+        /**
+         * 左数1
+         */
         private int n1;
-        /** 左数2 */
+        /**
+         * 左数2
+         */
         private int n2;
-        /** 表达式 + - */
+        /**
+         * 表达式 + -
+         */
         private String ex;
-        /** 右边的数 */
+        /**
+         * 右边的数
+         */
         private int r;
 
-        /** 答案是对还是错 0-错，1-对 */
+        /**
+         * 答案是对还是错 0-错，1-对
+         */
         private int t;
-        /** 答案时间，毫秒数 */
+        /**
+         * 答案时间，毫秒数
+         */
         private int ms;
 
         private int idx;

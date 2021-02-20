@@ -18,30 +18,30 @@ public class LargestElement {
      */
     public static void main(String[] args) {
         // 数组
-        int[] nums = {451,8343,15,843,548};
+        int[] nums = {451, 8343, 15, 843, 548};
         //返回第 5 大的数字
         int k = 3;
-        long start= System.currentTimeMillis();
-        int tag = kthLargestElement(k,nums);
-        System.out.println("耗时:"+ (System.currentTimeMillis()-start) +"  --   " + tag);
+        long start = System.currentTimeMillis();
+        int tag = kthLargestElement(k, nums);
+        System.out.println("耗时:" + (System.currentTimeMillis() - start) + "  --   " + tag);
 
     }
 
 
     public static int kthLargestElement(int k, int[] nums) {
         // 给定集合长度，减少扩容次数
-        HashSet<Integer> map=new HashSet<Integer>(nums.length);
-        for (int i:nums) {
+        HashSet<Integer> map = new HashSet<Integer>(nums.length);
+        for (int i : nums) {
             map.add(i);
         }
         //排重
         Object[] dis = map.toArray();
         Arrays.sort(dis);//需要做一次排序
         System.out.println(Arrays.toString(dis));
-        int m,n = dis.length - k;
-        if (n >= 0){
+        int m, n = dis.length - k;
+        if (n >= 0) {
             m = (int) dis[n];
-        }else{
+        } else {
             m = (int) dis[dis.length - 1];
         }
         return m;
@@ -54,6 +54,7 @@ public class LargestElement {
 
     /**
      * 这种是， 快速排序， 有点没看懂
+     *
      * @param k
      * @param nums
      * @param start

@@ -7,6 +7,7 @@ import java.util.Map;
 
 /**
  * <p>Description: 一个小算法 </p>
+ *
  * @author wuqiong  2018年3月22日
  */
 public class Solution {
@@ -43,13 +44,14 @@ public class Solution {
                 2321.81D,};
         double target = 1164D;
 
-        int[] result = twoSum(nums,target);
+        int[] result = twoSum(nums, target);
         //System.out.println(result);
         System.out.println(Arrays.toString(result));
     }
 
     /**
      * 方法描述:  时间复杂度O(n)
+     *
      * @param nums
      * @param target
      * @return int[]
@@ -70,6 +72,7 @@ public class Solution {
 
     /**
      * 方法描述: 时间复杂度O(n^2)
+     *
      * @param nums
      * @param target
      * @return int[]
@@ -90,12 +93,13 @@ public class Solution {
 
     /**
      * 方法描述: 输入一个数组，给定一个目标值。  求三个任意数相加等于目标值，并返回三个数组内的任意数的 下标值。
+     *
      * @param nums
      * @param target
      * @return int[]
      * @author andy 2018年3月22日 下午3:43:51
      */
-    public static int[] threeSum(double[] nums,double target){
+    public static int[] threeSum(double[] nums, double target) {
         int m = 0;
         int[] result = null;
         while (result == null && nums.length > m) {
@@ -115,8 +119,6 @@ public class Solution {
         }
         return result;
     }
-
-
 
 
 }

@@ -25,17 +25,16 @@ public class RSAUtils {
         String publicKey = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC1GW3FX5O0EoVVytmxc0RZUUODNmAHNy8XjarHMJQPDN2b+UFIzwasNpEWFIj+yykq+bVvMOXiXNWGL7NLEuXyPL6o/nRvHqzK8qLvHISMl9x3Cp0Z3z32xuDi91TcP+OfyY3W9h2lDYrJfMghnEjuj/Ciu8/hVBMPI9rkfytnJwIDAQAB";
 
 
-
         String test = "真的吗";
 
-        String  bbb = null;
+        String bbb = null;
         try {
 //            String aaaaa= encryptByPublicKey(test, publicKey);
-            String aaaaa= "ZG7YMOTuHiSw2ftVOhqnQrC38tfAShQqU36K4XUEP5WE6wnWO6zyf1jTaTwlMovMtjp4Kl9hRfvzdg8yW7aOtqL/BRHU6aoShFRxeDHHLYgr/GXv4M1OLPlvxvxKRMcgEGus+0nAiCOPCwTkY12F/sC3yviu3H0UvDcBd0StydM=";
+            String aaaaa = "ZG7YMOTuHiSw2ftVOhqnQrC38tfAShQqU36K4XUEP5WE6wnWO6zyf1jTaTwlMovMtjp4Kl9hRfvzdg8yW7aOtqL/BRHU6aoShFRxeDHHLYgr/GXv4M1OLPlvxvxKRMcgEGus+0nAiCOPCwTkY12F/sC3yviu3H0UvDcBd0StydM=";
 
 
-            System.out.println("加密信息为: "+ aaaaa);
-            bbb = decryptByPrivateKey(aaaaa,privateKey);
+            System.out.println("加密信息为: " + aaaaa);
+            bbb = decryptByPrivateKey(aaaaa, privateKey);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -45,16 +44,14 @@ public class RSAUtils {
 //        System.out.println("解密信息为: "+ Base64.encodeBase64String(bytes));
 
 
-
-
     }
 
 
     /**
      * 公钥加密
      *
-     * @param data 待加密数据
-     * @param publicKey  密钥
+     * @param data      待加密数据
+     * @param publicKey 密钥
      * @return byte[] 加密数据
      */
     public static String encryptByPublicKey(String data, String publicKey) throws Exception {
@@ -76,8 +73,8 @@ public class RSAUtils {
     /**
      * 私钥解密
      *
-     * @param data 待解密数据
-     * @param privateKeys  密钥
+     * @param data        待解密数据
+     * @param privateKeys 密钥
      * @return byte[] 解密数据
      */
     public static String decryptByPrivateKey(String data, String privateKeys) throws Exception {

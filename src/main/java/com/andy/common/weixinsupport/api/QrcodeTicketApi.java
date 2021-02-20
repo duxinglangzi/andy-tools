@@ -21,11 +21,14 @@ import java.nio.charset.Charset;
  */
 public class QrcodeTicketApi {
 
-    private QrcodeTicketApi(){}
-    private static class Inner{
+    private QrcodeTicketApi() {
+    }
+
+    private static class Inner {
         private static final QrcodeTicketApi instance = new QrcodeTicketApi();
     }
-    public static final QrcodeTicketApi getInstance(){
+
+    public static final QrcodeTicketApi getInstance() {
         return Inner.instance;
     }
 
@@ -33,29 +36,31 @@ public class QrcodeTicketApi {
 
     /**
      * 创建二维码ticket
-     * @param access_token      授权令牌
-     * @param qrcodeJson        JSON数据
+     *
+     * @param access_token 授权令牌
+     * @param qrcodeJson   JSON数据
      * @return
      */
-    public QrcodeTicket qrcodeCreate(String access_token, String qrcodeJson){
+    public QrcodeTicket qrcodeCreate(String access_token, String qrcodeJson) {
         HttpUriRequest httpUriRequest = RequestBuilder.post()
                 .setHeader(new BasicHeader(HttpHeaders.CONTENT_TYPE, ContentType.APPLICATION_JSON.toString()))
                 .setUri("https://api.weixin.qq.com/cgi-bin/qrcode/create")
                 .addParameter("access_token", access_token)
                 .setEntity(new StringEntity(qrcodeJson, Charset.forName("utf-8")))
                 .build();
-        return LocalHttpClient.executeJSONResult(httpUriRequest,QrcodeTicket.class);
+        return LocalHttpClient.executeJSONResult(httpUriRequest, QrcodeTicket.class);
     }
 
     /**
      * 创建二维码ticket
-     * @param access_token       授权令牌
-     * @param expire_seconds     该二维码有效时间，以秒为单位。 最大不超过604800（即7天）
-     * @param action_name        二维码类型，QR_SCENE为临时,QR_LIMIT_SCENE为永久,QR_LIMIT_STR_SCENE为永久的字符串参数值
-     * @param scene_id           场景值ID，临时二维码时为32位非0整型，永久二维码时最大值为100000（目前参数只支持1--100000）
+     *
+     * @param access_token   授权令牌
+     * @param expire_seconds 该二维码有效时间，以秒为单位。 最大不超过604800（即7天）
+     * @param action_name    二维码类型，QR_SCENE为临时,QR_LIMIT_SCENE为永久,QR_LIMIT_STR_SCENE为永久的字符串参数值
+     * @param scene_id       场景值ID，临时二维码时为32位非0整型，永久二维码时最大值为100000（目前参数只支持1--100000）
      * @return
      */
-    public QrcodeTicket qrcodeCreate(String access_token,Integer expire_seconds,String action_name,long scene_id){
+    public QrcodeTicket qrcodeCreate(String access_token, Integer expire_seconds, String action_name, long scene_id) {
         String qrcodeJson = String.format("{" + (expire_seconds == null ? "%1$s" : "\"expire_seconds\": %1$s, ") + "\"action_name\": \"%2$s\", \"action_info\": {\"scene\": {\"scene_id\": %3$d}}}",
                 expire_seconds == null ? "" : expire_seconds, action_name, scene_id);
         return qrcodeCreate(access_token, qrcodeJson);
@@ -64,40 +69,44 @@ public class QrcodeTicketApi {
 
     /**
      * 创建二维码ticket(临时二维码)
-     * @param access_token        授权令牌
-     * @param expire_seconds      该二维码有效时间，以秒为单位。 最大不超过604800（即7天）
-     * @param scene_id            场景值ID，临时二维码时为32位非0整型
+     *
+     * @param access_token   授权令牌
+     * @param expire_seconds 该二维码有效时间，以秒为单位。 最大不超过604800（即7天）
+     * @param scene_id       场景值ID，临时二维码时为32位非0整型
      * @return
      */
-    public QrcodeTicket qrcodeCreateTemp(String access_token,int expire_seconds,long scene_id){
-        return qrcodeCreate(access_token,expire_seconds,"QR_SCENE",scene_id);
+    public QrcodeTicket qrcodeCreateTemp(String access_token, int expire_seconds, long scene_id) {
+        return qrcodeCreate(access_token, expire_seconds, "QR_SCENE", scene_id);
     }
 
     /**
      * 创建二维码ticket(永久二维码)
-     * @param access_token        授权令牌
-     * @param scene_id            场景值ID，永久二维码时最大值为100000（目前参数只支持1--100000）
+     *
+     * @param access_token 授权令牌
+     * @param scene_id     场景值ID，永久二维码时最大值为100000（目前参数只支持1--100000）
      * @return
      */
-    public QrcodeTicket qrcodeCreateForever(String access_token,int scene_id){
-        return qrcodeCreate(access_token,null,"QR_LIMIT_SCENE",scene_id);
+    public QrcodeTicket qrcodeCreateForever(String access_token, int scene_id) {
+        return qrcodeCreate(access_token, null, "QR_LIMIT_SCENE", scene_id);
     }
 
     /**
      * 创建二维码ticket(永久二维码)
-     * @param access_token        授权令牌
-     * @param scene_str           场景值ID（字符串形式的ID），字符串类型，长度限制为1到64，仅永久二维码支持此字段 QR_LIMIT_STR_SCENE
+     *
+     * @param access_token 授权令牌
+     * @param scene_str    场景值ID（字符串形式的ID），字符串类型，长度限制为1到64，仅永久二维码支持此字段 QR_LIMIT_STR_SCENE
      * @return
      */
-    public QrcodeTicket qrcodeCreateForever(String access_token,String scene_str){
-    	String qrcodeJson = String.format("{" + "\"action_name\": \"%1$s\", \"action_info\": {\"scene\": {\"scene_str\":\"%2$s\"}}}","QR_LIMIT_STR_SCENE", scene_str);
-        log.info(">>>>qrcodeCreateForever.qrcodeJson:"+qrcodeJson);
-    	return qrcodeCreate(access_token, qrcodeJson);
+    public QrcodeTicket qrcodeCreateForever(String access_token, String scene_str) {
+        String qrcodeJson = String.format("{" + "\"action_name\": \"%1$s\", \"action_info\": {\"scene\": {\"scene_str\":\"%2$s\"}}}", "QR_LIMIT_STR_SCENE", scene_str);
+        log.info(">>>>qrcodeCreateForever.qrcodeJson:" + qrcodeJson);
+        return qrcodeCreate(access_token, qrcodeJson);
     }
 
     /**
      * 通过ticket换取二维码
-     * @param ticket   TICKET记得进行UrlEncode
+     *
+     * @param ticket TICKET记得进行UrlEncode
      * @return
      */
     public byte[] showQrcode(String ticket) {

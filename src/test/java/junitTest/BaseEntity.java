@@ -7,7 +7,7 @@ import java.io.Serializable;
  * <p>Description: </p>
  * <p>@author wuqiong  2018/1/10 14:24 </p>
  */
-public class BaseEntity implements Serializable{
+public class BaseEntity implements Serializable {
     private static final long serialVersionUID = 7314967460997900002L;
 
     protected Integer errcode;      //返回状态码
@@ -37,7 +37,6 @@ public class BaseEntity implements Serializable{
     public void setHasMore(Boolean hasMore) {
         this.hasMore = hasMore;
     }
-
 
 
 }

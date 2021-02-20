@@ -30,7 +30,7 @@ public class ConditionTest {
     public void work() {
         lock.lock();
         try {
-            System.out.println(Thread.currentThread().getName()+"----- Begin Work 开始干活~ ");
+            System.out.println(Thread.currentThread().getName() + "----- Begin Work 开始干活~ ");
 //                condition.await(3,TimeUnit.SECONDS);
 
             condition.await();//释放当前锁，

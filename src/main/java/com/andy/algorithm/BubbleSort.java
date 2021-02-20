@@ -11,7 +11,7 @@ public class BubbleSort {
 
     public static void main(String[] args) {
         System.out.println("开始排序-----");
-        int[] arrays=new int[]{1,5,4,7,2,3,45,345,3456,456,456};
+        int[] arrays = new int[]{1, 5, 4, 7, 2, 3, 45, 345, 3456, 456, 456};
         sort(arrays);
         System.out.println("排序完毕-----");
     }

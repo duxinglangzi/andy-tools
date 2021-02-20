@@ -51,10 +51,10 @@ public class ListForeach {
         map.put("qiong", "琼");
         map.put("ha", "哈");
         map.keySet().forEach(key -> System.out.println(map.get(key)));
-        
-        map.keySet().forEach(key->System.out.println("真的吗"));
 
-        map.values().forEach(val->{
+        map.keySet().forEach(key -> System.out.println("真的吗"));
+
+        map.values().forEach(val -> {
             System.out.println(val);
         });
 
@@ -66,7 +66,7 @@ public class ListForeach {
         System.out.println(s1);
 
         // 循环遍历成 map 结构
-        Map<String,List<String>> stringListMap=stringList.stream().collect(Collectors.groupingBy(t -> t));
+        Map<String, List<String>> stringListMap = stringList.stream().collect(Collectors.groupingBy(t -> t));
 
     }
 }

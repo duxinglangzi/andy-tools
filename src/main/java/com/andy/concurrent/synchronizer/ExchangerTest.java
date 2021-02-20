@@ -49,7 +49,6 @@ public class ExchangerTest {
 
     /**
      * Exchanger 交换器 必须是两个线程数据互相交换，
-     *
      */
     public static void testExchanger() {
         //  初始化一个Exchanger，并规定可交换的信息类型是杯子

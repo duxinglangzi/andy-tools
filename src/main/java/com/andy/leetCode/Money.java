@@ -1,7 +1,10 @@
 package com.andy.leetCode;
 
+import com.alibaba.fastjson.JSONObject;
+
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 
 /**
  * <p>Description: 找零钱 - 动态规划 </p>
@@ -20,6 +23,17 @@ public class Money {
 
     public static void main(String[] args) {
 
+        Date date = new Date();
+
+        System.out.println(date.getTime());
+        JSONObject jsonObject = new JSONObject();
+//        jsonObject.put("tstdate",new Date(1608277649240L));
+        jsonObject.put("date", date);
+
+        String replace = jsonObject.toJSONString().replace("a", "s");
+
+        System.out.println(jsonObject.toJSONString());
+
         int[] moneyArray = {1, 2, 5, 7, 10};
 
         int target = 13;
@@ -37,7 +51,7 @@ public class Money {
          */
 
         // 定义 target值的数组
-        int[] targetArray = new int[target +1 ];
+        int[] targetArray = new int[target + 1];
         targetArray[0] = 0;
         for (int i = 1; i < targetArray.length; i++) {
             targetArray[i] = -1;
@@ -74,7 +88,7 @@ public class Money {
 
             for (int j = 0; j < moneys.length; j++) {
                 // 面值必须小于 当前金额 i  ，  并且当前面值i  减去 当前的金额 不等于负1
-                if(moneys[j] <= i && arr[i - moneys[j]] != -1 ){
+                if (moneys[j] <= i && arr[i - moneys[j]] != -1) {
 
                     // 当前面值找零是负1 ，表示没有设置过值 ,或者说 当前金额为进行计算
                     // arr[i] 里面的值 比正在计算的最优解  大 ，则修改arr[i] 的值为 正在计算的值
@@ -91,39 +105,8 @@ public class Money {
         System.out.println(Arrays.toString(arr));
 
 
-
-
-
-
-
-
         return 0;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }

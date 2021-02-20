@@ -14,7 +14,6 @@ public class sssssss {
         System.out.println(subTableId < 10 ? ("0" + subTableId) : ("" + subTableId));
 
 
-
         for (int i = 9, j = 0; j < 1; i--, j++) System.out.println(i);
 
     }

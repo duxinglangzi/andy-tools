@@ -20,6 +20,6 @@ public class DivideStrategyInterfaceImpl implements StrategyInterface {
 //        if(b==0){
 //            throw new Exception("除数为0");
 //        }
-        return a/b;
+        return a / b;
     }
 }

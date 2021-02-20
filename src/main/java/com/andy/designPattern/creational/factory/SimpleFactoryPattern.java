@@ -11,6 +11,7 @@ public class SimpleFactoryPattern {
     static abstract class Car {
         abstract void run();
     }
+
     //奔驰汽车
     static class Benz extends Car {
         @Override
@@ -18,6 +19,7 @@ public class SimpleFactoryPattern {
             System.out.println("奔驰车在跑");
         }
     }
+
     //宝马汽车
     static class BMW extends Car {
         @Override
@@ -25,6 +27,7 @@ public class SimpleFactoryPattern {
             System.out.println("宝马车在跑");
         }
     }
+
     //汽车工厂，根据汽车名称创建汽车
     static class CarFactory {
         Car getCar(String name) {

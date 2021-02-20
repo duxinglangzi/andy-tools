@@ -16,7 +16,7 @@ public class TestFastJsonLocalDateTime extends TestCase {
 
     public void test_isse() {
 
-        VO vo=new VO();
+        VO vo = new VO();
         vo.setLocalDateTime(LocalDateTime.now());
 
 
@@ -24,8 +24,8 @@ public class TestFastJsonLocalDateTime extends TestCase {
 
 //        String str = "{\"localDateTime\":1513740725187}";
 
-        VO vo1 = JSON.parseObject(JSON.toJSONString(vo),VO.class);
-        assertEquals(vo.getLocalDateTime(),vo1.getLocalDateTime());
+        VO vo1 = JSON.parseObject(JSON.toJSONString(vo), VO.class);
+        assertEquals(vo.getLocalDateTime(), vo1.getLocalDateTime());
     }
 
 
@@ -39,8 +39,6 @@ public class TestFastJsonLocalDateTime extends TestCase {
         }
 
         public LocalDateTime localDateTime;
-
-
 
 
     }

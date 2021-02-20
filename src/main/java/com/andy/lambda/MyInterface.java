@@ -28,5 +28,4 @@ public interface MyInterface {
  *
  *      }
  * </pre>
- *
  */

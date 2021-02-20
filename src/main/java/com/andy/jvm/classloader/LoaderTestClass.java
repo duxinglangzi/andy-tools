@@ -6,7 +6,7 @@ package com.andy.jvm.classloader;
  */
 public class LoaderTestClass {
 
-    public void hello(){
+    public void hello() {
         System.out.println("hello word");
     }
 

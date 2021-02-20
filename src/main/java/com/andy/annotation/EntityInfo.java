@@ -8,6 +8,6 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE})
-public @interface EntityInfo{
+public @interface EntityInfo {
     String value() default "类的作用";
 }

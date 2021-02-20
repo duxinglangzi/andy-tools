@@ -11,50 +11,54 @@ import org.apache.http.client.methods.HttpUriRequest;
 import java.io.IOException;
 
 public class LocalHttpClient {
-	
+
     protected static HttpClient httpClient = HttpClientFactory.createHttpClient();
 
     /**
      * 数据返回:JSON对象解析
-     * @param request  request请求信息
-     * @param clazz    Class类对象
-     * @param <T>      泛指
-     * @return         Class类对象
+     *
+     * @param request request请求信息
+     * @param clazz   Class类对象
+     * @param <T>     泛指
+     * @return Class类对象
      */
-    public static <T> T executeJSONResult(HttpUriRequest request, Class<T> clazz){
-        return execute(request,JSONResponseHandler.createResponseHandler(clazz));
+    public static <T> T executeJSONResult(HttpUriRequest request, Class<T> clazz) {
+        return execute(request, JSONResponseHandler.createResponseHandler(clazz));
     }
 
     /**
      * 数据返回:XML对象解析
-     * @param request  request请求信息
-     * @param clazz    Class类对象
-     * @param <T>      泛指
-     * @return         Class类对象
+     *
+     * @param request request请求信息
+     * @param clazz   Class类对象
+     * @param <T>     泛指
+     * @return Class类对象
      */
-    public static <T> T executeXmlResult(HttpUriRequest request, Class<T> clazz){
+    public static <T> T executeXmlResult(HttpUriRequest request, Class<T> clazz) {
         return execute(request, XmlResponseHandler.createResponseHandler(clazz));
     }
-    
+
     /**
      * 方法描述: Es对象解析
+     *
      * @param request
      * @param clazz
      * @return EsPostResponse
      * @author wuqiong 2017年6月7日 下午2:01:47
      */
-    public static EsPostResponse executeEsResult(HttpUriRequest request, Class<? extends EsDataModel> clazz){
-        return EsResponseHandler.createEsResponseHandler(execute(request),clazz);
+    public static EsPostResponse executeEsResult(HttpUriRequest request, Class<? extends EsDataModel> clazz) {
+        return EsResponseHandler.createEsResponseHandler(execute(request), clazz);
     }
-    
+
     /**
      * 执行Http请求
-     * @param request  请求参数
-     * @param responseHandler  返回值解析
-     * @param <T>   泛指Class类
+     *
+     * @param request         请求参数
+     * @param responseHandler 返回值解析
+     * @param <T>             泛指Class类
      * @return T
      */
-    public static <T> T execute(HttpUriRequest request, ResponseHandler<T> responseHandler){
+    public static <T> T execute(HttpUriRequest request, ResponseHandler<T> responseHandler) {
         try {
             return httpClient.execute(request, responseHandler);
         } catch (ClientProtocolException e) {
@@ -67,6 +71,7 @@ public class LocalHttpClient {
 
     /**
      * Http请求
+     *
      * @param request 请求参数
      * @return HttpResponse对象
      */

@@ -5,6 +5,7 @@ import java.util.concurrent.Semaphore;
 
 /**
  * <p>Description: 信号量 测试 </p>
+ *
  * @author wuqiong  2017年8月11日
  */
 public class SemaphoreTest {
@@ -28,6 +29,7 @@ public class SemaphoreTest {
             this.name = name;
             this.wc = wc;
         }
+
         @Override
         public void run() {
             System.out.print(name + "：憋死老子了!");

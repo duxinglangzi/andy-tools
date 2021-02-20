@@ -10,9 +10,6 @@ public class InheritableThreadLocalTest {
     public static void main(String[] args) {
 
 
-
-
-
     }
 
 

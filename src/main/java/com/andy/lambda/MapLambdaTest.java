@@ -48,9 +48,8 @@ public class MapLambdaTest {
         Map<Integer, LambdaUser> lambdaUserMap = userList.stream().collect(Collectors.toMap(LambdaUser::getAge, e -> e));// 错误的写法。
 
         // 因此这地方需要做一个排重操作，只留一个
-        Map<Integer, LambdaUser> lambdaUserMap2 = userList.stream().collect(Collectors.toMap(LambdaUser::getAge, e -> e, (a,b) -> a));// 正确的写法。
+        Map<Integer, LambdaUser> lambdaUserMap2 = userList.stream().collect(Collectors.toMap(LambdaUser::getAge, e -> e, (a, b) -> a));// 正确的写法。
         // 这里写 a 表示，只留第一个。 如果写 b 表示只留 第二个
-
 
 
     }

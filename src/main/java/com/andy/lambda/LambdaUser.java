@@ -5,8 +5,8 @@ import java.io.Serializable;
 /**
  * <p>Description:使用方法引用 (ClassName::Method) </p>
  * <p>
- *     举例: LambdaUser::getAge
- *     说明: 不需要 .  不需要调用方法的括号
+ * 举例: LambdaUser::getAge
+ * 说明: 不需要 .  不需要调用方法的括号
  * </p>
  * <p>@Author wuqiong  2018/6/19 </p>
  */
@@ -16,9 +16,9 @@ public class LambdaUser implements Serializable {
     private int age;
     private String name;
 
-    LambdaUser(Integer age,String name){
-        this.age=age;
-        this.name=name;
+    LambdaUser(Integer age, String name) {
+        this.age = age;
+        this.name = name;
     }
 
     public int getAge() {
