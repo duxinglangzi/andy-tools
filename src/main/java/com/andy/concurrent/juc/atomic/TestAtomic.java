@@ -8,13 +8,13 @@ public class TestAtomic {
     public volatile static int A = 0;
 
     public static void main(String[] args) throws InterruptedException {
-        System.out.println("i累计前" + TestAtomic.i + ",A累计前：" + TestAtomic.A);
+        System.out.println(">>>>>i累计前" + TestAtomic.i + ",A累计前：" + TestAtomic.A);
         Thread t0 = new Thread(new Runnable() {
             @Override
             public void run() {
                 for (int j = 0; j < 100000; j++) {
                     TestAtomic.A++;
-                    TestAtomic.i.getAndIncrement();
+                    TestAtomic.i.decrementAndGet();
                 }
             }
         });
@@ -32,7 +32,7 @@ public class TestAtomic {
         t0.join();
         t1.join();
 
-        System.out.print("i累计后" + TestAtomic.i + ",A累计后：" + TestAtomic.A);
+        System.out.print("----i累计后" + TestAtomic.i + ",A累计后：" + TestAtomic.A);
 
     }
 }
