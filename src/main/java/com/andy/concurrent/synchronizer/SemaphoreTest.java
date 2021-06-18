@@ -15,8 +15,8 @@ public class SemaphoreTest {
         for (int i = 1; i <= 6; i++) {
             Thread t = new Thread(new Person("第" + i + "个人", wc));
             t.start();
-            Thread t2 = new Thread(new Person("-------第" + i + "个人", wc));
-            t2.start();
+//            Thread t2 = new Thread(new Person("-------第" + i + "个人", wc));
+//            t2.start();
             Thread.sleep(new Random().nextInt(800));
         }
     }
