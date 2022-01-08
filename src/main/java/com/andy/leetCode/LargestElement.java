@@ -1,9 +1,6 @@
 package com.andy.leetCode;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.LinkedHashSet;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -30,19 +27,19 @@ public class LargestElement {
 
     public static int kthLargestElement(int k, int[] nums) {
         // 给定集合长度，减少扩容次数
-        HashSet<Integer> map = new HashSet<Integer>(nums.length);
-        for (int i : nums) {
-            map.add(i);
-        }
+//        HashSet<Integer> map = new HashSet<Integer>(nums.length);
+//        for (int i : nums) {
+//            map.add(i);
+//        }
         //排重
-        Object[] dis = map.toArray();
-        Arrays.sort(dis);//需要做一次排序
-        System.out.println(Arrays.toString(dis));
-        int m, n = dis.length - k;
+//        Object[] dis = map.toArray();
+        Arrays.sort(nums);//需要做一次排序
+        System.out.println(Arrays.toString(nums));
+        int m, n = nums.length - k;
         if (n >= 0) {
-            m = (int) dis[n];
+            m = (int) nums[n];
         } else {
-            m = (int) dis[dis.length - 1];
+            m = (int) nums[nums.length - 1];
         }
         return m;
 //        if (k < 1 || nums == null) {
